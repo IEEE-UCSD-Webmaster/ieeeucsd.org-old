@@ -3,6 +3,7 @@ import React, {Component} from "react";
 interface HorizontalSectionProps {
 	link: string;
 	title: string;
+	row?: boolean;
 }
 interface HorizontalSectionState {}
 
@@ -15,7 +16,9 @@ export default class HorizontalSection extends Component<HorizontalSectionProps,
 	public render() {
 		return <div className="horizontal-section">
 			<a className="section-title" href={this.props.link}>{this.props.title}</a>
-			{this.props.children}
+			<div className={this.props.row ? "row-group" : "col-group"}>
+				{this.props.children}
+			</div>
 		</div>;
 	}
 }

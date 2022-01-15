@@ -1,18 +1,18 @@
 import React, {Component} from "react";
 
-interface ImageGalleryProps {
+interface ImageSlideshowProps {
 	urls: string[];
 	delay: number;
 	alt: string;
 }
-interface ImageGalleryState {
+interface ImageSlideshowState {
 	progress: number;
 }
 
-export default class ImageGallery extends Component<ImageGalleryProps, ImageGalleryState> {
+export default class ImageSlideshow extends Component<ImageSlideshowProps, ImageSlideshowState> {
 	private interval: number;
 
-	constructor(props: ImageGalleryProps) {
+	constructor(props: ImageSlideshowProps) {
 		super(props);
 		this.state = {
 			progress: 0
@@ -21,7 +21,7 @@ export default class ImageGallery extends Component<ImageGalleryProps, ImageGall
 	}
 
 	private changeImage(): void {
-		if (this.state.progress < this.props.urls.length) {
+		if (this.state.progress < this.props.urls.length - 1) {
 			this.setState({progress: this.state.progress + 1});
 		} else {
 			this.setState({progress: 0});
@@ -29,7 +29,7 @@ export default class ImageGallery extends Component<ImageGalleryProps, ImageGall
 	}
 
 	public render() {
-		return <div className="image-gallery">
+		return <div className="image-slideshow">
 			<img className="slideshow-image" src={this.props.urls[this.state.progress]} alt={this.props.alt}></img>
 		</div>;
 	}

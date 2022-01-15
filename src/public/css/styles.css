@@ -1,22 +1,4 @@
-::-webkit-scrollbar {
-	width: 10px;
-}
-::-webkit-scrollbar-button,
-::-webkit-scrollbar-corner {
-	display: none;
-}
-::-webkit-scrollbar-thumb {
-	background: #ececec;
-}
-::-webkit-scrollbar-thumb:hover {
-	background: #e2e2e2;
-}
-::-webkit-scrollbar-thumb:active {
-	background: #b8b8b8;
-}
-::-webkit-scrollbar-track {
-	background: #383838;
-}
+
 
 /* Color vars should go here */
 :root {
@@ -26,8 +8,23 @@
 	--grey: #c4d2e3;
 	--black: #1f1f1f;
 	--white: #eeeeee;
+	--accent: #ffe419;
 }
 
+* {
+	scrollbar-width: auto;
+	scrollbar-color: var(--black) transparent;
+}
+*::-webkit-scrollbar {
+	width: 0.6em;
+}
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: var(--black);
+	border-radius: 10px;
+}
 html {
 	color: var(--black);
 	font-family: "Open Sans", sans-serif;
@@ -36,13 +33,14 @@ body {
 	margin: 0;
 }
 
+/* Top nav styles */
 .top-nav {
 	width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 	background-color: var(--dark-blue);
 	align-items: center;
-	position: fixed;
+	position: relative;
 }
 .logo {
 	width: 10em;
@@ -56,9 +54,74 @@ body {
 	margin-right: 0.75em;
 	text-decoration: none;
 }
-
 .top-nav .nav-link:nth-of-type(1) {
 	margin-left: auto;
+}
+.bottom-bar {
+	width: 100%;
+	height: 0.25em;
+	background-color: var(--accent);
+}
+.nav-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/* */
+.horizontal-section {
+	padding: 2em;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	padding-left: 15%;
+	padding-right: 15%;
+	font-size: 1.2em;
+}
+.column-group {
+	display: flex;
+	flex-direction: column;
+}
+.row-group {
+	display: flex;
+	flex-direction: row;
+}
+.section-title {
+	color: var(--med-blue);
+	font-size: 2.2em;
+	text-decoration: none;
+	width: fit-content;
+}
+.section-title:hover {
+	text-decoration: underline;
+}
+.carousel-item {
+	display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background: ghostwhite;
+    box-shadow: 3px 3px 5px 1px grey;
+	margin: 0 1em;
+}
+.carousel {
+	display: flex;
+	overflow-x: auto;
+	padding: 1em 0;
+}
+.carousel :first-child {
+	margin-left: 0;
+}
+.carousel :last-child {
+	margin-right: 0;
+}
+
+/* Image slideshow styles */
+.slideshow-image {
+	width: 22em;
+	height: auto;
+}
+.image-slideshow {
+	margin-right: 1em;
 }
 
 /* Responsive queries go here */

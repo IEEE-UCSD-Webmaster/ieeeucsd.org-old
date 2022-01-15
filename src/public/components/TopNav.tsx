@@ -20,8 +20,11 @@ export default class TopNav extends React.Component<TopNavProps, TopNavState> {
 		});
 
 		return <div className="top-nav">
-			<img className="logo" src={this.props.image} alt={this.props.alt}></img>
-			{navLinks}
+			<div className="nav-container">
+				<img className="logo" src={this.props.image} alt={this.props.alt}></img>
+				{navLinks}
+			</div>
+			<div className="bottom-bar"></div>
 		</div>;
 	}
 }
