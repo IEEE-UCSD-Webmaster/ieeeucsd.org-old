@@ -22,7 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/express": "^4.17.13",
-    "@types/node": "^14.17.32",
+    "@types/node": "^16.11.7",
     "@types/react-dom": "^16.9.14",
     "@types/ws": "^7.4.7",
     "express": "^4.17.1",

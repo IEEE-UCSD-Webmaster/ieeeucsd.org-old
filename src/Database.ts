@@ -50,7 +50,7 @@ export default class UserDatabase {
 	 * @param url the mongodb database url to connect to
 	 */
 	constructor(url: string) {
-		mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+		mongoose.connect(url);
 		mongoose.set("returnOriginal", false);
 	}
 
