@@ -16,16 +16,14 @@ interface Website {
 
 const app = express();
 const template = fs.readFileSync(path.join(__dirname, "public/template.html")).toString();
-const websites = [
-	{
-		sitename: "index",
-		title: "IEEE at UCSD",
-		description: "",
-		jsfile: "js/index.js",
-		cssfile: "css/styles.css",
-		themecolor: ""
-	}
-] as Website[];
+const websites = [{
+	sitename: "index",
+	title: "IEEE at UCSD",
+	description: "",
+	jsfile: "js/index.js",
+	cssfile: "css/styles.css",
+	themecolor: ""
+}] as Website[];
 
 const PORT = 8080;
 
