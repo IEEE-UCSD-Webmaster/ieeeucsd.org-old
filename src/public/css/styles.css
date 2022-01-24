@@ -17,6 +17,7 @@
 }
 *::-webkit-scrollbar {
 	width: 0.6em;
+	height: 0.6em;
 }
 *::-webkit-scrollbar-track {
 	background: transparent;
@@ -49,7 +50,7 @@ body {
 }
 .nav-link {
 	color: var(--white);
-	font-size: 1.5em;
+	font-size: 1.6em;
 	margin-left: 0.75em;
 	margin-right: 0.75em;
 	text-decoration: none;
@@ -88,9 +89,11 @@ body {
 }
 .section-title {
 	color: var(--med-blue);
-	font-size: 2.2em;
+	font-size: 2.4em;
 	text-decoration: none;
 	width: fit-content;
+	padding-bottom: 0.15em;
+	font-weight: bold;
 }
 .section-title:hover {
 	text-decoration: underline;
@@ -98,23 +101,67 @@ body {
 .carousel-item {
 	display: flex;
     flex-direction: column;
-    padding: 1em;
-    background: ghostwhite;
+    background: white;
     box-shadow: 3px 3px 5px 1px grey;
 	margin: 0 1em;
 }
-.carousel {
+.carousel-inner {
 	display: flex;
 	overflow-x: auto;
 	padding: 1em 0;
 }
-.carousel :first-child {
-	margin-left: 0;
+.carousel {
+	position: relative;
 }
-.carousel :last-child {
-	margin-right: 0;
+.carousel::after, .carousel::before {
+	content: "";
+	width: 1em;
+	height: calc(100% - 0.6em);
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: linear-gradient(270deg, white, transparent)
 }
-
+.carousel::before {
+	left: 0;
+	background: linear-gradient(90deg, white, transparent);
+}
+.carousel-next {
+	position: absolute;
+	right: -0.5em;
+	font-weight: 1000;
+	font-size: 2em;
+	border-radius: 1000px;
+	background: var(--med-blue);
+	color: var(--white);
+	width: 1.5em;
+	height: 1.5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.8;
+	top: calc(50% -  0.75em);
+	z-index: 1;
+	user-select: none;
+	cursor: pointer;
+}
+.carousel-inner::-webkit-scrollbar-thumb {
+	background-color: var(--grey);
+}
+.carousel-item a {
+	font-weight: 500;
+	color: var(--med-blue);
+	padding: 0.5em;
+}
+.carousel-item a:hover {
+	color: var(--sky-blue);
+}
+.carousel-item a:active {
+	color: var(--dark-blue)
+}
+.description-text {
+	font-size: 1.2em;
+}
 /* Image slideshow styles */
 .slideshow-image {
 	width: 22em;
@@ -122,6 +169,25 @@ body {
 }
 .image-slideshow {
 	margin-right: 1em;
+	float: left;
+	height: fit-content;
+	padding: 0 1em 1em 0;
+}
+
+.link-button {
+	padding: 0.5em;
+	background-color: var(--med-blue);
+	border-radius: 1em;
+	border: none;
+	font-size: 1.5em;
+	color: white;
+	margin-top: 1em;
+}
+.link-button:hover {
+	background-color: var(--sky-blue);
+}
+.link-button:active {
+	background-color: var(--dark-blue);
 }
 
 /* Responsive queries go here */

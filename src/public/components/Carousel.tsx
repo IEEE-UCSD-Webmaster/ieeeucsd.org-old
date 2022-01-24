@@ -2,21 +2,28 @@ import * as React from "react";
 import {Component} from "react";
 
 interface CarouselProps {}
-interface CarouselState {}
+interface CarouselState {
+	innerRef: React.Ref<HTMLDivElement>
+}
 
 export default class Carousel extends Component<CarouselProps, CarouselState> {
 	constructor(props: CarouselProps) {
 		super(props);
-		this.state = {};
+		this.state = {
+			innerRef: React.createRef()
+		};
 	}
 
 	private scrollToNext(e: MouseEvent) {
-		// implement later
+		let elem = (this.state.innerRef as any).current;
+		elem.scrollTo({left: elem.scrollWidth, behavior: "smooth"})
 	}
 
 	public render() {
 		return <div className="carousel">
-			{this.props.children}
+			<div className="carousel-inner" ref={this.state.innerRef}>
+				{this.props.children}
+			</div>
 			<div className="carousel-next" onClick={this.scrollToNext.bind(this)}>&gt;</div>
 		</div>;
 	}
