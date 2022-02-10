@@ -1,5 +1,3 @@
-
-
 /* Color vars should go here */
 :root {
 	--dark-blue: #00629b;
@@ -7,8 +5,12 @@
 	--sky-blue: #6ab7ff;
 	--grey: #c4d2e3;
 	--black: #1f1f1f;
-	--white: #eeeeee;
-	--accent: #ffe419;
+	--white: #F2F6FF;
+	--accent: #FFCD00;
+}
+
+#root {
+	background-color: var(--white);
 }
 
 * {
@@ -44,13 +46,15 @@ body {
 	position: relative;
 }
 .logo {
-	width: 10em;
+	width: 20em;
 	height: auto;
 	padding: 0.5em;
+	margin-left: 1em;
+	image-rendering: -webkit-optimize-contrast;
 }
 .nav-link {
 	color: var(--white);
-	font-size: 1.6em;
+	font-size: 1.5em;
 	margin-left: 0.75em;
 	margin-right: 0.75em;
 	text-decoration: none;
@@ -86,6 +90,10 @@ body {
 .row-group {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	column-gap: 2.5em;
 }
 .section-title {
 	color: var(--med-blue);
@@ -120,11 +128,11 @@ body {
 	position: absolute;
 	top: 0;
 	right: 0;
-	background: linear-gradient(270deg, white, transparent)
+	background: linear-gradient(270deg, var(--white), transparent)
 }
 .carousel::before {
 	left: 0;
-	background: linear-gradient(90deg, white, transparent);
+	background: linear-gradient(90deg, var(--white), transparent);
 }
 .carousel-next {
 	position: absolute;
@@ -152,15 +160,20 @@ body {
 	font-weight: 500;
 	color: var(--med-blue);
 	padding: 0.5em;
+	text-decoration: none;
 }
 .carousel-item a:hover {
 	color: var(--sky-blue);
+	text-decoration: underline;
 }
 .carousel-item a:active {
 	color: var(--dark-blue)
 }
 .description-text {
 	font-size: 1.2em;
+}
+.carousel-item img {
+	max-width: 20em;
 }
 /* Image slideshow styles */
 .slideshow-image {
@@ -182,12 +195,38 @@ body {
 	font-size: 1.5em;
 	color: white;
 	margin-top: 1em;
+	cursor: pointer;
 }
 .link-button:hover {
 	background-color: var(--sky-blue);
 }
 .link-button:active {
 	background-color: var(--dark-blue);
+}
+
+.officer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 1em 0;
+	width: 10em;
+}
+.officer-image {
+	aspect-ratio: 1 / 1;
+	max-width: 10em;
+	max-height: 10em;
+}
+.officer-name {
+	font-weight: bold;
+	font-size: 1.2em;
+	text-align: center;
+	margin-bottom: 0.15em;
+}
+.officer-position {
+	font-style: italic;
+	font-size: 1.1em;
+	text-align: center;
 }
 
 /* Responsive queries go here */

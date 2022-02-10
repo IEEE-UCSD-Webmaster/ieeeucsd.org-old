@@ -21,7 +21,7 @@ export default class TopNav extends React.Component<TopNavProps, TopNavState> {
 
 		return <div className="top-nav">
 			<div className="nav-container">
-				<img className="logo" src={this.props.image} alt={this.props.alt}></img>
+				<img className="logo" srcSet={`${this.props.image} 2x`} alt={this.props.alt}></img>
 				{navLinks}
 			</div>
 			<div className="bottom-bar"></div>

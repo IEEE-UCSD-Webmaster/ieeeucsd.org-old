@@ -15,8 +15,8 @@ export default class Carousel extends Component<CarouselProps, CarouselState> {
 	}
 
 	private scrollToNext(e: MouseEvent) {
-		let elem = (this.state.innerRef as any).current;
-		elem.scrollTo({left: elem.scrollWidth, behavior: "smooth"})
+		let elem = (this.state.innerRef as any).current as HTMLDivElement;
+		elem.scrollBy({left: elem.parentElement.getBoundingClientRect().width, behavior: "smooth"})
 	}
 
 	public render() {

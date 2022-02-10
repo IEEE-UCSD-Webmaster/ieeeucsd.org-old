@@ -1,7 +1,9 @@
 import * as React from "react";
 import {Component} from "react";
 
-interface AvailabilityProps {}
+interface AvailabilityProps {
+	checkUrl: string;
+}
 interface AvailabilityState {
 	available: boolean;
 }
@@ -12,6 +14,9 @@ export default class Availability extends Component<AvailabilityProps, Availabil
 		this.state = {
 			available: false
 		};
+	}
+	private checkAvailable() {
+		
 	}
 
 	public render() {
