@@ -94,6 +94,10 @@ body {
 	justify-content: space-between;
 	column-gap: 2.5em;
 }
+.row-group::after{
+	content: "";
+	width: 10em;
+}
 .section-title {
 	color: var(--med-blue);
 	font-size: 2.4em;
@@ -229,9 +233,19 @@ body {
 }
 
 /* Responsive queries go here */
-@media screen and (max-width: 760px) {
-	
+@media screen and (max-width: 617px) {
+	.row-group {
+		justify-content: center;
+	}
+	.slideshow-image {
+		width: 18em;
+	}
+	.nav-link {
+		display: none;
+	}
 }
-@media screen and (max-width: 430px) {
-	
+@media screen and (min-width: 1645px) {
+	.row-group::after {
+		width: 25em;
+	}
 }

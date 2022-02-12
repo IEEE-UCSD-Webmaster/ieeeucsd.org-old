@@ -34,14 +34,6 @@ const EVENTS = [{
 	image: "img/event.png",
 	workshopName: "Workshop Name",
 	location: "/"
-},{
-	image: "img/event.png",
-	workshopName: "Workshop Name",
-	location: "/"
-},{
-	image: "img/event.png",
-	workshopName: "Workshop Name",
-	location: "/"
 }];
 
 const officers = [{
@@ -83,7 +75,7 @@ const officers = [{
 },{
 	name: "Samyak Karnavat",
 	position: "Social Chair",
-	photo: "img/samyak.jpg"
+	photo: "img/temp.png"
 },{
 	name: "Tasnia Jamal",
 	position: "Social Chair",
@@ -95,7 +87,7 @@ const officers = [{
 },{
 	name: "Zhiqiang Pi",
 	position: "Quarterly Projects Chair",
-	photo: "img/zhiqiang.jpg"
+	photo: "img/temp.png"
 },{
 	name: "Kevin Chang",
 	position: "Quarterly Projects Chair",
@@ -103,7 +95,7 @@ const officers = [{
 },{
 	name: "Benjamin Tang",
 	position: "Project Space Chair",
-	photo: "img/benjamin.jpg"
+	photo: "img/temp.png"
 },{
 	name: "Jason Liang",
 	position: "Professional Chair",
@@ -131,11 +123,11 @@ const officers = [{
 },{
 	name: "Soyon Kim",
 	position: "Outreach Chair",
-	photo: "img/soyon.jpg"
+	photo: "img/temp.png"
 },{
 	name: "Niklas Chang",
 	position: "Events Coordinator",
-	photo: "img/niklas.jpg"
+	photo: "img/temp.png"
 }];
 
 interface MainProps {}
@@ -149,19 +141,19 @@ class Main extends React.Component<MainProps, MainState> {
 	public render() {
 		return <>
 			<TopNav names={ACTIVE_PAGES} links={ACTIVE_PAGES.map(e=>"#" + e.toLowerCase())} image="img/IEEEUCSD.png" alt="IEEE at UCSD Logo"></TopNav>
-			<HorizontalSection title="About" link="about:blank" id="about">
+			<HorizontalSection title="About" link="/" id="about">
 				<ImageGallery urls={TEAM_PHOTOS} alt="Team photos" delay={8000}></ImageGallery>
 				<span className="description-text">
 					<strong>We are dedicated to helping develop students into professional Engineers</strong><br/><br/>
 					As an organization, we strive to provide opportunities to students both at UC San Diego and in the larger STEM community to gain hands-on experience with autonomous robotics and its various disciplines. Throughout the year, we host dozens of events and workshops to teach skills not frequently taught in the classroom, as well as outreach events for students looking to give back to the STEM community. We also provide professional development and other resources to help students achieve their true potential as they develop into professional engineers.
 				</span>
 			</HorizontalSection>
-			<HorizontalSection title="Events" link="about:blank" id="events">
+			<HorizontalSection title="Events" link="/" id="events">
 				<Carousel>
 					{EVENTS.map(e=><CarouselItem {...e}/>)}
 				</Carousel>
 			</HorizontalSection>
-			<HorizontalSection title="Project Space" link="about:blank" id="projects">
+			<HorizontalSection title="Project Space" link="/" id="projects">
 				<ImageGallery urls={PROJECT_SPACE} alt="The IEEE Project Space" delay={8000}></ImageGallery>
 				<span className="description-text">
 					This is a description all about the project space and how amazingly awesome it is
@@ -172,9 +164,9 @@ class Main extends React.Component<MainProps, MainState> {
 				</span>
 				<br/>
 				<Availability checkUrl="/">Check all availability</Availability>
-				<ButtonLink url="about:blank">Check all availability</ButtonLink>
+				<ButtonLink url="https://calendar.google.com/calendar/embed?src=c_6s39rvn2ltu208443e0j2e1b58%40group.calendar.google.com">Check all availability</ButtonLink>
 			</HorizontalSection>
-			<HorizontalSection title="Officers" link="about:blank" id="officers" row={true}>
+			<HorizontalSection title="Officers" link="/" id="officers" row={true}>
 				{officers.map(o=><Officer name={o.name} position={o.position} photo={o.photo} key={o.name}></Officer>)}
 			</HorizontalSection>
 		</>;

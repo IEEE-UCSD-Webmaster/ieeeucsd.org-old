@@ -15,9 +15,9 @@ export default class CarouselItem extends Component<CarouselItemProps, CarouselI
 	}
 
 	public render() {
-		return <div className="carousel-item">
+		return <a className="carousel-item" href={this.props.location}>
 			<img src={this.props.image}></img>
 			<a href={this.props.location}>{this.props.workshopName}</a>
-		</div>;
+		</a>;
 	}
 }

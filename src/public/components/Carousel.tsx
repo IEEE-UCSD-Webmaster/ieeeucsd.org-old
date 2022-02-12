@@ -27,4 +27,12 @@ export default class Carousel extends Component<CarouselProps, CarouselState> {
 			<div className="carousel-next" onClick={this.scrollToNext.bind(this)}>&gt;</div>
 		</div>;
 	}
+	public componentDidMount(): void {
+		let elem = (this.state.innerRef as any).current as HTMLDivElement;
+		if (elem.scrollWidth < elem.parentElement.scrollWidth) {
+			elem.parentElement.querySelector(".carousel-next").setAttribute("style", "display: none;");
+		} else {
+			elem.parentElement.querySelector(".carousel-next").setAttribute("style", "");
+		}
+	}
 }
