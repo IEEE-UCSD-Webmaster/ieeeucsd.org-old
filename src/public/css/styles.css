@@ -50,7 +50,6 @@ body {
 	height: auto;
 	padding: 0.5em;
 	margin-left: 1em;
-	image-rendering: -webkit-optimize-contrast;
 }
 .nav-link {
 	color: var(--white);

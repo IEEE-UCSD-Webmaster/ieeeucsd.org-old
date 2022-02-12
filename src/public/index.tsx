@@ -105,10 +105,6 @@ const officers = [{
 	position: "Project Space Chair",
 	photo: "img/benjamin.jpg"
 },{
-	name: "Narek Boghozian",
-	position: "Project Drive Chair",
-	photo: "img/narek.jpg"
-},{
 	name: "Jason Liang",
 	position: "Professional Chair",
 	photo: "img/jason.jpg"
