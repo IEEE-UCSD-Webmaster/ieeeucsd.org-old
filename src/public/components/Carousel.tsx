@@ -1,38 +1,57 @@
 import * as React from "react";
 import {Component} from "react";
+import { CarouselItemProps } from "./CarouselItem";
+import CarouselPage from "./CarouselPage";
 
-interface CarouselProps {}
+interface CarouselProps {
+	items: CarouselItemProps[];
+	itemsPerPage: number;
+}
 interface CarouselState {
-	innerRef: React.Ref<HTMLDivElement>
+	page: number;
 }
 
 export default class Carousel extends Component<CarouselProps, CarouselState> {
 	constructor(props: CarouselProps) {
 		super(props);
 		this.state = {
-			innerRef: React.createRef()
+			page: 0
 		};
 	}
 
-	private scrollToNext(e: MouseEvent) {
-		let elem = (this.state.innerRef as any).current as HTMLDivElement;
-		elem.scrollBy({left: elem.parentElement.getBoundingClientRect().width, behavior: "smooth"})
+	private prevPage() {
+		this.setState({page: this.state.page - 1 < 0 ? 0 : this.state.page - 1});
+	}
+
+	private nextPage() {
+		this.setState({ page: this.state.page + 1 > Math.ceil(this.props.items.length / this.props.itemsPerPage) - 1 ?
+			Math.ceil(this.props.items.length / this.props.itemsPerPage) - 1 :
+			this.state.page + 1
+		});
 	}
 
 	public render() {
+		let arr = this.chunkArray(this.props.items);
 		return <div className="carousel">
-			<div className="carousel-inner" ref={this.state.innerRef}>
-				{this.props.children}
-			</div>
-			<div className="carousel-next" onClick={this.scrollToNext.bind(this)}>&gt;</div>
+			<img className="carousel-left" src="img/arrow.svg" style={
+				this.state.page === 0 ? {visibility: "hidden"} : {}
+			} onClick={this.prevPage.bind(this)}></img>
+			<div className="carousel-items">{
+				arr.map((items, i)=>(
+					<CarouselPage items={items} visible={i===this.state.page}></CarouselPage>
+				))
+			}</div>
+			<img className="carousel-right" src="img/arrow.svg" style={
+				this.state.page === arr.length - 1 ? {visibility: "hidden"} : {}
+			} onClick={this.nextPage.bind(this)}></img>
 		</div>;
 	}
-	public componentDidMount(): void {
-		let elem = (this.state.innerRef as any).current as HTMLDivElement;
-		if (elem.scrollWidth < elem.parentElement.scrollWidth) {
-			elem.parentElement.querySelector(".carousel-next").setAttribute("style", "display: none;");
-		} else {
-			elem.parentElement.querySelector(".carousel-next").setAttribute("style", "");
+
+	private chunkArray(array: CarouselItemProps[]):CarouselItemProps[][] {
+		let returnArr = [] as CarouselItemProps[][];
+		for(let i = 0; i < array.length; i+=this.props.itemsPerPage) {
+			returnArr.push(array.slice(i, i + this.props.itemsPerPage));
 		}
+		return returnArr;
 	}
 }

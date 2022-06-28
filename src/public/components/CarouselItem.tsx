@@ -1,10 +1,11 @@
 import * as React from "react";
 import {Component} from "react";
 
-interface CarouselItemProps {
-	location: string;
-	workshopName: string;
-	image: string;
+export interface CarouselItemProps {
+	name: string;
+	position: string;
+	email: string;
+	photo: string;
 }
 interface CarouselItemState {}
 
@@ -15,9 +16,11 @@ export default class CarouselItem extends Component<CarouselItemProps, CarouselI
 	}
 
 	public render() {
-		return <a className="carousel-item" href={this.props.location}>
-			<img src={this.props.image}></img>
-			<a href={this.props.location}>{this.props.workshopName}</a>
-		</a>;
+		return <div className="carousel-item">
+			<img src={this.props.photo}></img>
+			<div className="carousel-name">{this.props.name}</div>
+			<div className="carousel-pos">{this.props.position}</div>
+			<div className="carousel-email">{this.props.email}</div>
+		</div>;
 	}
 }

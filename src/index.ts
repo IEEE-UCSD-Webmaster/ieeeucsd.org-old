@@ -25,7 +25,7 @@ const websites = [{
 	themecolor: ""
 }] as Website[];
 
-const PORT = 8080;
+const PORT = 9000;
 
 // Make the public directory traversible to people online
 app.use(express.static(path.join(__dirname, "public")));
@@ -62,4 +62,15 @@ function generatePage(name: string): string {
 	return html;
 }
 
-app.listen(PORT, "127.0.0.1");
+function generateFilePages() {
+	for (let site of websites) {
+		let html = generatePage(site.sitename);
+		fs.writeFileSync(require("path").join(__dirname, "public/", `${site.sitename}.html`), html);
+	}
+}
+
+if (process.argv[2] === "generate") {
+	generateFilePages();
+} else {
+	app.listen(PORT, "127.0.0.1");
+}
