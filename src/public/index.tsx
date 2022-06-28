@@ -1,6 +1,6 @@
 import * as ReactDom from "react-dom";
 import * as React from "react";
-import TopBar from "./components/topbar";
+import TopBar from "./components/TopBar";
 import {ACTIVE_PAGES, SOCIALS, EMAIL, OFFICERS} from "./Config";
 import Splash from "./components/Splash";
 import DefaultSection from "./components/DefaultSection";
