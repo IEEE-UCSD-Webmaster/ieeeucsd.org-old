@@ -31,7 +31,48 @@ const websites = [{
 	jsfile: "js/index.js",
 	cssfile: "css/styles.css",
 	themecolor: ""
-}] as Website[];
+},
+{
+	sitename: "events",
+	title: "IEEE at UCSD",
+	description: "",
+	jsfile: "js/index.js",
+	cssfile: "css/styles.css",
+	themecolor: ""
+},
+{
+	sitename: "projects",
+	title: "IEEE at UCSD",
+	description: "",
+	jsfile: "js/index.js",
+	cssfile: "css/styles.css",
+	themecolor: ""
+},
+{
+	sitename: "committees",
+	title: "IEEE at UCSD",
+	description: "",
+	jsfile: "js/index.js",
+	cssfile: "css/styles.css",
+	themecolor: ""
+},
+{
+	sitename: "sponsors",
+	title: "IEEE at UCSD",
+	description: "",
+	jsfile: "js/index.js",
+	cssfile: "css/styles.css",
+	themecolor: ""
+},
+{
+	sitename: "contact",
+	title: "IEEE at UCSD",
+	description: "",
+	jsfile: "js/index.js",
+	cssfile: "css/styles.css",
+	themecolor: ""
+}
+] as Website[];
 
 const PORT = 9000;
 
@@ -50,11 +91,24 @@ app.use(express.urlencoded({extended: true}));
 app.get("/", (req: Request, res: Response) => {
 	respond(res, "index");
 });
-
 app.get("/about", (req: Request, res: Response) => {
 	respond(res, "about");
 });
-
+app.get("/events", (req: Request, res: Response) => {
+	respond(res, "events");
+});
+app.get("/projects", (req: Request, res: Response) => {
+	respond(res, "projects");
+});
+app.get("/committees", (req: Request, res: Response) => {
+	respond(res, "committees");
+});
+app.get("/sponsors", (req: Request, res: Response) => {
+	respond(res, "sponsors");
+});
+app.get("/contact", (req: Request, res: Response) => {
+	respond(res, "contact");
+});
 
 /**
  * Utility functions for above methods
