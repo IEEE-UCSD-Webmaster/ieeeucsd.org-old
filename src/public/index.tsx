@@ -19,7 +19,6 @@ class Main extends React.Component<MainProps, MainState> {
 	}
 	public render() {
 		return <>
-			<TopBar links={ACTIVE_PAGES}></TopBar>
 			<Splash cta="Join the 2nd largest IEEE student branch in the US!" delay={2000} backgrounds={["img/backgrounds/fa21qp.png"]}></Splash>
 			<DefaultSection title="We are..." paragraphs={[
 				"A diverse engineering community seeking to empower students through hands-on projects, networking opportunities, and social events. Bonus points on having an open-access project studio!",
@@ -32,9 +31,9 @@ class Main extends React.Component<MainProps, MainState> {
 			</div>
 			<DefaultSection className={"involved"} title="How else can I get involved?">
 				<div className="cards">
-					<InvolveBox boxTitle="Events" image="https://dummyimage.com/400x400/000/fff" description="sdfsfdsd"></InvolveBox>
-					<InvolveBox boxTitle="Projects" image="https://dummyimage.com/400x400/000/fff" description="sdfdsfdsf"></InvolveBox>
-					<InvolveBox boxTitle="Committees" image="https://dummyimage.com/400x400/000/fff" description="sdfsdfsdf"></InvolveBox>
+					<InvolveBox boxTitle="Events" image="img/backgrounds/fa21social.png" description="Events"></InvolveBox>
+					<InvolveBox boxTitle="Projects" image="img/backgrounds/robofest.png" description="Projects"></InvolveBox>
+					<InvolveBox boxTitle="Committees" image="img/backgrounds/gbm/png" description="Committees"></InvolveBox>
 				</div>
 			</DefaultSection>
 			<DefaultSection title="Have questions? Contact us!">

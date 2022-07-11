@@ -23,6 +23,14 @@ const websites = [{
 	jsfile: "js/index.js",
 	cssfile: "css/styles.css",
 	themecolor: ""
+},
+{
+	sitename: "about",
+	title: "IEEE at UCSD",
+	description: "",
+	jsfile: "js/index.js",
+	cssfile: "css/styles.css",
+	themecolor: ""
 }] as Website[];
 
 const PORT = 9000;
@@ -42,6 +50,11 @@ app.use(express.urlencoded({extended: true}));
 app.get("/", (req: Request, res: Response) => {
 	respond(res, "index");
 });
+
+app.get("/about", (req: Request, res: Response) => {
+	respond(res, "about");
+});
+
 
 /**
  * Utility functions for above methods

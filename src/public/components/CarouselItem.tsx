@@ -20,7 +20,6 @@ export default class CarouselItem extends Component<CarouselItemProps, CarouselI
 			<img src={this.props.photo}></img>
 			<div className="carousel-name">{this.props.name}</div>
 			<div className="carousel-pos">{this.props.position}</div>
-			<div className="carousel-email">{this.props.email}</div>
 		</div>;
 	}
 }
