@@ -31,9 +31,9 @@ class Main extends React.Component<MainProps, MainState> {
 			</div>
 			<DefaultSection className={"involved"} title="How else can I get involved?">
 				<div className="cards">
-					<InvolveBox boxTitle="Events" image="img/backgrounds/fa21social.png" description="Events"></InvolveBox>
-					<InvolveBox boxTitle="Projects" image="img/backgrounds/robofest.png" description="Projects"></InvolveBox>
-					<InvolveBox boxTitle="Committees" image="img/backgrounds/gbm/png" description="Committees"></InvolveBox>
+					<InvolveBox boxTitle="Events" image="img/backgrounds/fa21social.png" description="Meet fellow IEEE members!"></InvolveBox>
+					<InvolveBox boxTitle="Projects" image="img/backgrounds/robofest.png" description="Learn new skills!"></InvolveBox>
+					<InvolveBox boxTitle="Committees" image="img/backgrounds/gbm.png" description="Build our amazing community!"></InvolveBox>
 				</div>
 			</DefaultSection>
 			<DefaultSection title="Have questions? Contact us!">
