@@ -20,7 +20,7 @@ class Main extends React.Component<MainProps, MainState> {
 	public render() {
 		return <>
 			<Splash cta="Events" delay={2000} backgrounds={["img/backgrounds/fa21social.png"]}></Splash>
-			<DefaultSection title="Events" paragraphs={[
+			<DefaultSection title="" paragraphs={[
 				"No events yet... Keep an eye out for new upates!"
 			]}></DefaultSection>
 			<DefaultSection title="Have questions? Contact us!">
