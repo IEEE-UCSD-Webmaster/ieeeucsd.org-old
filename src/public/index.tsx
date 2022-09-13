@@ -19,6 +19,7 @@ class Main extends React.Component<MainProps, MainState> {
 	}
 	public render() {
 		return <>
+			<TopBar links={ACTIVE_PAGES}></TopBar>
 			<Splash cta="Join the 2nd largest IEEE student branch in the US!" delay={2000} backgrounds={["img/backgrounds/fa21qp.png"]}></Splash>
 			<DefaultSection title="We are..." paragraphs={[
 				"A diverse engineering community seeking to empower students through hands-on projects, networking opportunities, and social events. Bonus points on having an open-access project studio!",
@@ -36,16 +37,18 @@ class Main extends React.Component<MainProps, MainState> {
 					<InvolveBox boxTitle="Committees" image="img/backgrounds/gbm.png" description="Build our amazing community!"></InvolveBox>
 				</div>
 			</DefaultSection>
-			<DefaultSection title="Have questions? Contact us!">
-				<div className="join-scls">{
-					[...EMAIL, ...SOCIALS].map(n => (
-						<SocialCard url={n.url} image={n.icon} message={n.message}></SocialCard>
-					))
-				}</div>
-			</DefaultSection>
-			<DefaultSection className="contact" title="Or... Contact one of our staff!">
-				<Carousel items={OFFICERS} itemsPerPage={6}></Carousel>
-			</DefaultSection>
+			<div id="contact-section">
+				<DefaultSection title="Have questions? Contact us!">
+					<div className="join-scls">{
+						[...EMAIL, ...SOCIALS].map(n => (
+							<SocialCard url={n.url} image={n.icon} message={n.message}></SocialCard>
+						))
+					}</div>
+				</DefaultSection>
+				<DefaultSection className="contact" title="Or... Contact one of our staff!">
+					<Carousel items={OFFICERS} itemsPerPage={6}></Carousel>
+				</DefaultSection>
+			</div>
 			<Footer></Footer>
 		</>;
 	}
