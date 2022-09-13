@@ -44,7 +44,7 @@ class Main extends React.Component<MainProps, MainState> {
 				}</div>
 			</DefaultSection>
 			<DefaultSection className="contact" title="Or... Contact one of our staff!">
-				<Carousel items={OFFICERS} itemsPerPage={8}></Carousel>
+				<Carousel items={OFFICERS} itemsPerPage={6}></Carousel>
 			</DefaultSection>
 			<Footer></Footer>
 		</>;
