@@ -173,6 +173,11 @@ a:hover {
 	font-size: 2em;
 	margin-bottom: 2em;
 }
+.ex-link {
+	color: var(--accent);
+	font-size: 2em;
+	margin-bottom: 2em;
+}
 .involved {
 	border-radius: 50% 50% 0 0 / 4rem;
 	transform: translateY(-4rem);
