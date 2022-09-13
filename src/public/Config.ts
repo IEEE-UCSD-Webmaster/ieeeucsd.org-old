@@ -62,79 +62,64 @@ export const SOCIALS_WHITE = [{
 	message: "@ieeeucsd"
 }];
 export const OFFICERS = [{
-	name: "Sarp User",
+	name: "Darin Tsui",
 	position: "Chair",
-	photo: "img/officers/sarp.jpg",
+	photo: "img/officers/darin.jpg",
 	email: "email@ucsd.edu"
 },{
-	name: "Parth Desai",
+	name: "Arjun Sampath",
 	position: "Vice Chair Finance",
-	photo: "img/officers/parth.jpg",
+	photo: "img/officers/arjun.jpg",
 	email: "email@ucsd.edu"
 },{
-	name: "Derek Cantor",
+	name: "Abby Hackbarth",
 	position: "Vice Chair Internal",
-	photo: "img/officers/derek.jpg",
-	email: "email@ucsd.edu"
-},{
-	name: "Clyde Baron Rapinan",
-	position: "Vice Chair Events",
-	photo: "img/officers/clyde.jpg",
-	email: "email@ucsd.edu"
-},{
-	name: "Danny Vo",
-	position: "Vice Chair Projects",
-	photo: "img/officers/danny.jpg",
-	email: "email@ucsd.edu"
-},{
-	name: "Nick Petrone",
-	position: "Webmaster",
-	photo: "img/officers/nick.jpg",
-	email: "email@ucsd.edu"
-},{
-	name: "Jiawen Yu",
-	position: "Technical Chair",
-	photo: "img/officers/jiawen.jpg",
-	email: "email@ucsd.edu"
-},{
-	name: "Victor Ku",
-	position: "Technical Chair",
-	photo: "img/officers/victor.jpg",
-	email: "email@ucsd.edu"
-},{
-	name: "Sunny Chu",
-	position: "Technical Chair",
-	photo: "img/officers/sunny.jpg",
-	email: "email@ucsd.edu"
-},{
-	name: "Samyak Karnavat",
-	position: "Social Chair",
-	photo: "img/officers/samyak.jpg",
+	photo: "img/officers/abby.jpg",
 	email: "email@ucsd.edu"
 },{
 	name: "Tasnia Jamal",
-	position: "Social Chair",
+	position: "Vice Chair Events",
 	photo: "img/officers/tasnia.jpg",
 	email: "email@ucsd.edu"
 },{
-	name: "Hector Montenegro",
-	position: "Robocup Soccer Chair",
-	photo: "img/officers/hector.jpg",
-	email: "email@ucsd.edu"
-},{
-	name: "Zhiqiang Pi",
-	position: "Quarterly Projects Chair",
-	photo: "img/officers/zhiqiang.jpg",
-	email: "email@ucsd.edu"
-},{
 	name: "Kevin Chang",
-	position: "Quarterly Projects Chair",
+	position: "Vice Chair Projects",
 	photo: "img/officers/kevin.jpg",
 	email: "email@ucsd.edu"
 },{
-	name: "Benjamin Tang",
+	name: "Jiliana Tiu",
+	position: "Webmaster",
+	photo: "img/officers/jiliana.jpg",
+	email: "email@ucsd.edu"
+},{
+	name: "Mohak Vaswani",
+	position: "Technical Chair",
+	photo: "img/officers/mohak.jpg",
+	email: "email@ucsd.edu"
+},{
+	name: "Parisa Shahabi",
+	position: "Social Chair",
+	photo: "img/officers/parisa.jpg",
+	email: "email@ucsd.edu"
+},{
+	name: "Yash Puneet",
+	position: "Robocup Soccer Chair",
+	photo: "img/officers/yash.jpg",
+	email: "email@ucsd.edu"
+},{
+	name: "Rafaella Gomes",
+	position: "Robocup Soccer Chair",
+	photo: "img/officers/rafaella.jpg",
+	email: "email@ucsd.edu"
+},{
+	name: "Josh Lapidario",
+	position: "Quarterly Projects Chair",
+	photo: "img/officers/josh.jpg",
+	email: "email@ucsd.edu"
+},{
+	name: "Derek Nguyen",
 	position: "Project Space Chair",
-	photo: "img/officers/ben.jpg",
+	photo: "img/officers/derek.jpg",
 	email: "email@ucsd.edu"
 },{
 	name: "Jason Liang",
@@ -147,29 +132,29 @@ export const OFFICERS = [{
 	photo: "img/officers/vuong.jpg",
 	email: "email@ucsd.edu"
 },{
-	name: "Thanh Tong",
+	name: "Stephanie Xu",
 	position: "PR Chair - Graphics",
-	photo: "img/officers/thanh.jpg",
-	email: "email@ucsd.edu"
-},{
-	name: "Abby Hackbarth",
-	position: "PR Chair - Graphics",
-	photo: "img/officers/abby.jpg",
+	photo: "img/officers/stephanie.jpg",
 	email: "email@ucsd.edu"
 },{
 	name: "Brigette Hacia",
-	position: "PR Chair - Marketing",
+	position: "PR Chair - Graphics",
 	photo: "img/officers/brigette.jpg",
 	email: "email@ucsd.edu"
 },{
-	name: "Darin Tsui",
-	position: "Outreach Chair",
-	photo: "img/officers/darin.jpg",
+	name: "Sankalp Kaushik",
+	position: "PR Chair - Media",
+	photo: "img/officers/sankalp.jpg",
 	email: "email@ucsd.edu"
 },{
-	name: "Soyon Kim",
+	name: "Daniel Chen",
 	position: "Outreach Chair",
-	photo: "img/officers/soyon.jpg",
+	photo: "img/officers/daniel.jpg",
+	email: "email@ucsd.edu"
+},{
+	name: "Dennis Liam",
+	position: "Outreach Chair",
+	photo: "img/officers/dennis.jpg",
 	email: "email@ucsd.edu"
 },{
 	name: "Niklas Chang",
