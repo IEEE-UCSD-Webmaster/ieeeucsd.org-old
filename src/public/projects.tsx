@@ -19,6 +19,7 @@ class Main extends React.Component<MainProps, MainState> {
 	}
 	public render() {
 		return <>
+			<TopBar links={ACTIVE_PAGES}></TopBar>
 			<Splash cta="Projects" delay={2000} backgrounds={["img/backgrounds/robocar.png"]}></Splash>
 			<DefaultSection title="RoboCup" paragraphs={[
 				"\"RoboCup is an international scientific initiative with the goal to advance the state of the art of intelligent robots. When established in 1997, the original mission was to field a team of robots capable of winning against the human soccer World Cup champions by 2050.\""

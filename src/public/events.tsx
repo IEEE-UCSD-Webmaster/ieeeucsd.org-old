@@ -19,6 +19,7 @@ class Main extends React.Component<MainProps, MainState> {
 	}
 	public render() {
 		return <>
+			<TopBar links={ACTIVE_PAGES}></TopBar>
 			<Splash cta="Events" delay={2000} backgrounds={["img/backgrounds/fa21social.png"]}></Splash>
 			<DefaultSection title="" paragraphs={[
 				"No events yet... Keep an eye out for new upates!"
