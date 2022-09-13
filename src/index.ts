@@ -44,7 +44,7 @@ const websites = [{
 	sitename: "projects",
 	title: "IEEE at UCSD",
 	description: "",
-	jsfile: "js/index.js",
+	jsfile: "js/projects.js",
 	cssfile: "css/styles.css",
 	themecolor: ""
 },
