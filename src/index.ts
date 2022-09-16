@@ -52,7 +52,7 @@ const websites = [{
 	sitename: "committees",
 	title: "IEEE at UCSD",
 	description: "",
-	jsfile: "js/index.js",
+	jsfile: "js/committees.js",
 	cssfile: "css/styles.css",
 	themecolor: ""
 },
