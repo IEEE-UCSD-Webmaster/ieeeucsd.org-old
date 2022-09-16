@@ -36,7 +36,7 @@ class Main extends React.Component<MainProps, MainState> {
 				<div className="cards">
 					<InvolveBox boxTitle="" image="img/backgrounds/robocar.png" description="'22 Robocar Competition"></InvolveBox>
 					<InvolveBox boxTitle="" image="img/backgrounds/micromouse.png" description="'22 Micromouse Competition"></InvolveBox>
-					<InvolveBox boxTitle="" image="img/backgrounds/robocarteam.png" description="'22 IEEE Team Meeting"></InvolveBox>
+					<InvolveBox boxTitle="" image="img/backgrounds/sp22qp.png" description="'22 Spring QP Showcase"></InvolveBox>
 				</div>
 			</DefaultSection>
 			<DefaultSection title="Have questions? Contact us!">
