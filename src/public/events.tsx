@@ -25,12 +25,20 @@ class Main extends React.Component<MainProps, MainState> {
 				"Outside the classroom, we believe our events should bring us together and help us refine our skills, foster long lasting connections, give back to the community, and prepare us for our careers.",
 				"In similar fashion, our events are split up each to serve one of these goals: technical, social, K-12 outreach, and professional."
 			]}></DefaultSection>
+
 			
-			<DefaultSection title="Officer Open Hours">
+			<DefaultSection title="Events">
 				<div>
 					<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
 				</div>
 			</DefaultSection>
+
+			<DefaultSection title="Open Access Hours">
+				<div>
+					<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
+				</div>
+			</DefaultSection>
+
 			
 			<DefaultSection title="Have questions? Contact us!">
 				<div className="join-scls">{
