@@ -41,14 +41,15 @@ class Main extends React.Component<MainProps, MainState> {
 			</DefaultSection>
 
 			<div id="contact-us">
-				<DefaultSection title="Have questions? Contact us!">
-					<div className="join-scls contact">{
+				<DefaultSection className="contact" title="Have questions? Contact us!">
+					<div className="join-scls">{
 						[...EMAIL, ...SOCIALS].map(n => (
 							<SocialCard url={n.url} image={n.icon} message={n.message}></SocialCard>
 						))
 					}</div>
 				</DefaultSection>
 			</div>
+
 			<Footer></Footer>
 		</>;
 	}

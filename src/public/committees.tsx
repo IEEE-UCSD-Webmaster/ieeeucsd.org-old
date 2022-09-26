@@ -35,15 +35,19 @@ class Main extends React.Component<MainProps, MainState> {
 				</div>
 			</DefaultSection>
 			
-			<div id="contact-us">
-				<DefaultSection title="Have questions? Contact us!">
-					<div className="join-scls contact">{
+			<div className="contact-us">
+				<DefaultSection title="Interested? Join our socials!">
+					<div className="join-scls">{
 						[...EMAIL, ...SOCIALS].map(n => (
 							<SocialCard url={n.url} image={n.icon} message={n.message}></SocialCard>
 						))
 					}</div>
 				</DefaultSection>
+				<DefaultSection className="contact" title="Or... Contact one of our staff!">
+					<Carousel items={OFFICERS} itemsPerPage={6}></Carousel>
+				</DefaultSection>
 			</div>
+			
 			<Footer></Footer>
 		</>;
 	}
