@@ -20,9 +20,9 @@ class Main extends React.Component<MainProps, MainState> {
 	public render() {
 		return <>
 			<TopBar links={ACTIVE_PAGES}></TopBar>
-			<Splash cta="Committees" delay={2000} backgrounds={["img/backgrounds/robocar.png"]}></Splash>
+			<Splash cta="The backbone of IEEE. Come help make a difference!" delay={2000} backgrounds={["img/backgrounds/robocar.png"]}></Splash>
 			<DefaultSection title="Join us!" paragraphs={[
-				"Our Technical, Social, Professional, PR, Outreach committees work hard to spread IEEE's message. To apply, please contact us! We would love to have you in our team."
+				"Interested in gaining experience of event planning and development, meeting new friends, and learning more about IEEE? Join one of our committees as an IEEEntern!"
 			]}>
 			</DefaultSection>
 			<DefaultSection className={"our-comms"} title="Our Committees">
@@ -47,7 +47,7 @@ class Main extends React.Component<MainProps, MainState> {
 					<Carousel items={OFFICERS} itemsPerPage={6}></Carousel>
 				</DefaultSection>
 			</div>
-			
+
 			<Footer></Footer>
 		</>;
 	}
