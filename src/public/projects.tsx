@@ -28,7 +28,7 @@ class Main extends React.Component<MainProps, MainState> {
 				<a className='ex-link' href='https://www.robocup.org/'>RoboCup website</a>
 			</DefaultSection>
 			<DefaultSection title="Quarterly Projects" paragraphs={[
-				"Gain project experience through IEEE's Quarterly Projects where teams fully develop a project from scratch within 10 weeks!"
+				"Getting started on hardware development or want to make your own project? IEEE's Quarterly Projects aims to provide students with project experience in a span of 10 weeks. During QP, students will acquire skills used in the industry such as C++ and the prototyping process with the assistance of our mentors."
 			]}>
 				<a className='ex-link' href='https://forms.gle/eW6e1i3vWCdBj7Vn6'>Apply here</a>
 			</DefaultSection>
