@@ -335,3 +335,9 @@ a:hover {
 		font-size: 0.45em;
 	}
 }
+
+#cal {
+	border:solid 1px #777;
+	width: 800px;
+	height: 600px; 
+}
