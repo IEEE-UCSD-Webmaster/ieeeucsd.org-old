@@ -39,6 +39,7 @@ class Main extends React.Component<MainProps, MainState> {
 					<InvolveBox boxTitle="Committees" image="img/backgrounds/gbm.png" description="Build our amazing community!"></InvolveBox>
 				</div>
 			</DefaultSection>
+			
 			<div className="contact-us">
 				<DefaultSection title="Have questions? Contact us!">
 					<div className="join-scls">{
