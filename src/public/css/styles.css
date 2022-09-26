@@ -341,3 +341,13 @@ a:hover {
 	width: 800px;
 	height: 600px; 
 }
+
+#calendar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: var(--main);
+	padding-top: 2em;
+	padding-bottom: 2em;
+}

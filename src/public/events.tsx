@@ -32,16 +32,19 @@ class Main extends React.Component<MainProps, MainState> {
 				}</div>
 			</DefaultSection>
 
-			<div>
+			<div id="calendar">
 			<html>
 				<iframe id="cal" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles"></iframe>
 			</html>
 			</div>
 			
 
-			<div>
-				<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
-			</div>
+			<DefaultSection title="Officer Open Hours">
+				<div>
+					<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
+				</div>
+			</DefaultSection>
+			
 
 			<Footer></Footer>
 		</>;
