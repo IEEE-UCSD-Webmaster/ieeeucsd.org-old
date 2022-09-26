@@ -39,13 +39,16 @@ class Main extends React.Component<MainProps, MainState> {
 					<InvolveBox boxTitle="" image="img/backgrounds/sp22qp.png" description="'22 Spring QP Showcase"></InvolveBox>
 				</div>
 			</DefaultSection>
-			<DefaultSection title="Have questions? Contact us!">
-				<div className="join-scls">{
-					[...EMAIL, ...SOCIALS].map(n => (
-						<SocialCard url={n.url} image={n.icon} message={n.message}></SocialCard>
-					))
-				}</div>
-			</DefaultSection>
+
+			<div id="contact-us">
+				<DefaultSection title="Have questions? Contact us!">
+					<div className="join-scls">{
+						[...EMAIL, ...SOCIALS].map(n => (
+							<SocialCard url={n.url} image={n.icon} message={n.message}></SocialCard>
+						))
+					}</div>
+				</DefaultSection>
+			</div>
 			<Footer></Footer>
 		</>;
 	}
