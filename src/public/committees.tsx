@@ -20,7 +20,7 @@ class Main extends React.Component<MainProps, MainState> {
 	public render() {
 		return <>
 			<TopBar links={ACTIVE_PAGES}></TopBar>
-			<Splash cta="The backbone of IEEE. Come help make a difference!" delay={2000} backgrounds={["img/backgrounds/robocar.png"]}></Splash>
+			<Splash cta="The backbone of IEEE. Come help make a difference!" delay={2000} backgrounds={["img/backgrounds/committee.png"]}></Splash>
 			<DefaultSection title="Join us!" paragraphs={[
 				"Interested in gaining experience of event planning and development, meeting new friends, and learning more about IEEE? Join one of our committees as an IEEEntern!"
 			]}>
