@@ -29,13 +29,13 @@ class Main extends React.Component<MainProps, MainState> {
 			
 			<DefaultSection title="Events">
 				<div>
-					<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
+					<iframe src="https://calendar.google.com/calendar/embed?src=666sh64sku5n29qv2a2f4598jc%40group.calendar.google.com&ctz=America%2FLos_Angeles" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
 				</div>
 			</DefaultSection>
 
 			<DefaultSection title="Open Access Hours">
 				<div>
-					<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
+					<iframe src="https://calendar.google.com/calendar/embed?src=c_gr3iim9ae4dv9784qkf8meb40c%40group.calendar.google.com&ctz=America%2FLos_Angeles" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
 				</div>
 			</DefaultSection>
 
