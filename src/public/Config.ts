@@ -164,6 +164,6 @@ export const OFFICERS = [{
 },{
 	name: "Sankalp Kaushik",
 	position: "PR Chair - Media",
-	photo: "img/officers/sankalp.jpg",
+	photo: "img/officers/temp.png",
 	email: "email@ucsd.edu"
 }];
