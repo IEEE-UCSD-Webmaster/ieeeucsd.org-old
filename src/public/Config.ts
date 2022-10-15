@@ -12,9 +12,6 @@ export const ACTIVE_PAGES = [{
 	name: "Committees",
 	url: "/committees"
 },{
-	name: "Sponsors",
-	url: "/sponsors"
-},{
 	name: "Contact Us",
 	url: "/contact"
 }];

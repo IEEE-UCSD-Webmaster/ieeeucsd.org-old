@@ -57,14 +57,6 @@ const websites = [{
 	themecolor: ""
 },
 {
-	sitename: "sponsors",
-	title: "IEEE at UCSD",
-	description: "",
-	jsfile: "js/index.js",
-	cssfile: "css/styles.css",
-	themecolor: ""
-},
-{
 	sitename: "contact",
 	title: "IEEE at UCSD",
 	description: "",
@@ -102,9 +94,6 @@ app.get("/projects", (req: Request, res: Response) => {
 });
 app.get("/committees", (req: Request, res: Response) => {
 	respond(res, "committees");
-});
-app.get("/sponsors", (req: Request, res: Response) => {
-	respond(res, "sponsors");
 });
 app.get("/contact", (req: Request, res: Response) => {
 	respond(res, "contact");
