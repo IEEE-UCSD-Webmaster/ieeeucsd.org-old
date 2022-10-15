@@ -351,3 +351,9 @@ a:hover {
 	padding-top: 2em;
 	padding-bottom: 2em;
 }
+
+iframe {
+	width: 80vw;
+    height: 600px;
+    max-width: 1000px;
+}
