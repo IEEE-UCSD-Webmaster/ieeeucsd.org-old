@@ -21,22 +21,13 @@ class Main extends React.Component<MainProps, MainState> {
 		return <>
 			<TopBar links={ACTIVE_PAGES}></TopBar>
 			<Splash cta="Come out to our events!" delay={2000} backgrounds={["img/backgrounds/fa21social.png"]}></Splash>
-			<DefaultSection title="" paragraphs={[
-				"Outside the classroom, we believe our events should bring us together and help us refine our skills, foster long lasting connections, give back to the community, and prepare us for our careers.",
-				"In similar fashion, our events are split up each to serve one of these goals: technical, social, K-12 outreach, and professional."
-			]}></DefaultSection>
 
-			
 			<DefaultSection title="Events">
-				<div>
-					<iframe src="https://calendar.google.com/calendar/embed?src=666sh64sku5n29qv2a2f4598jc%40group.calendar.google.com&ctz=America%2FLos_Angeles" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
-				</div>
+				<iframe src="https://calendar.google.com/calendar/embed?src=666sh64sku5n29qv2a2f4598jc%40group.calendar.google.com&ctz=America%2FLos_Angeles" frameBorder="0" scrolling="no"></iframe>
 			</DefaultSection>
 
 			<DefaultSection title="Open Access Hours">
-				<div>
-					<iframe src="https://calendar.google.com/calendar/embed?src=c_gr3iim9ae4dv9784qkf8meb40c%40group.calendar.google.com&ctz=America%2FLos_Angeles" width="800" height="600" frameBorder="0" scrolling="no"></iframe>
-				</div>
+				<iframe src="https://calendar.google.com/calendar/embed?src=c_gr3iim9ae4dv9784qkf8meb40c%40group.calendar.google.com&ctz=America%2FLos_Angeles" frameBorder="0" scrolling="no"></iframe>
 			</DefaultSection>
 
 			<div id="contact-us">
