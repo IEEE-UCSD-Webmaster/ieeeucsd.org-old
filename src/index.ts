@@ -96,7 +96,7 @@ app.get("/committees", (req: Request, res: Response) => {
 	respond(res, "committees");
 });
 app.get("/contact", (req: Request, res: Response) => {
-	respond(res, "contact");
+	res.sendFile(__dirname + "/#contact-us");
 });
 
 /**

@@ -35,7 +35,7 @@ class Main extends React.Component<MainProps, MainState> {
 				</div>
 			</DefaultSection>
 			
-			<div className="contact-us">
+			<div id="contact-us">
 				<DefaultSection title="Interested? Join our socials!">
 					<div className="join-scls">{
 						[...EMAIL, ...SOCIALS].map(n => (
