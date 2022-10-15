@@ -25,14 +25,6 @@ const websites = [{
 	themecolor: ""
 },
 {
-	sitename: "about",
-	title: "IEEE at UCSD",
-	description: "",
-	jsfile: "js/index.js",
-	cssfile: "css/styles.css",
-	themecolor: ""
-},
-{
 	sitename: "events",
 	title: "IEEE at UCSD",
 	description: "",
@@ -82,9 +74,6 @@ app.use(express.urlencoded({extended: true}));
 // Send main page
 app.get("/", (req: Request, res: Response) => {
 	respond(res, "index");
-});
-app.get("/about", (req: Request, res: Response) => {
-	respond(res, "about");
 });
 app.get("/events", (req: Request, res: Response) => {
 	respond(res, "events");

@@ -1,7 +1,7 @@
 // The links that are on the top nav bar that link to a lowercase version of their page
 export const ACTIVE_PAGES = [{
-	name: "About Us",
-	url: "/about"
+	name: "Home",
+	url: "/"
 },{
 	name: "Events",
 	url: "/events"
