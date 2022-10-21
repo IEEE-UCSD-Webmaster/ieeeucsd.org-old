@@ -64,9 +64,9 @@ export const OFFICERS = [{
 	photo: "img/officers/darin.jpg",
 	email: "email@ucsd.edu"
 },{
-	name: "Abby Hackbarth",
+	name: "Brigette Hacia",
 	position: "Vice Chair Internal",
-	photo: "img/officers/abby.jpg",
+	photo: "img/officers/brigette.jpg",
 	email: "email@ucsd.edu"
 },{
 	name: "Tasnia Jamal",
@@ -154,13 +154,13 @@ export const OFFICERS = [{
 	photo: "img/officers/stephanie.jpg",
 	email: "email@ucsd.edu"
 },{
-	name: "Brigette Hacia",
-	position: "PR Chair - Graphics",
-	photo: "img/officers/brigette.jpg",
-	email: "email@ucsd.edu"
-},{
 	name: "Sankalp Kaushik",
 	position: "PR Chair - Media",
+	photo: "img/officers/sankalp.png",
+	email: "email@ucsd.edu"
+},{
+	name: "Matthew Mikhailov",
+	position: "Supercomputing Chair",
 	photo: "img/officers/temp.png",
 	email: "email@ucsd.edu"
 }];
