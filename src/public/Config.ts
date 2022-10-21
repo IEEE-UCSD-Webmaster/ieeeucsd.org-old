@@ -156,7 +156,7 @@ export const OFFICERS = [{
 },{
 	name: "Sankalp Kaushik",
 	position: "PR Chair - Media",
-	photo: "img/officers/sankalp.png",
+	photo: "img/officers/sankalp.jpg",
 	email: "email@ucsd.edu"
 },{
 	name: "Matthew Mikhailov",
