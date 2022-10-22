@@ -2,7 +2,7 @@
 
 ## Deployment
 
-Github Actions have been set to trigger on each push and pull request on the `main` branch. The website will be built as static pages to the `page` branch where it will be deployed onto [ieeeucsd.edu](https://ieeeucsd.edu).
+Github Actions have been set to trigger on each push onto the `main` branch. The website will be built as static pages to the `page` branch where it will be deployed onto [ieeeucsd.edu](https://ieeeucsd.edu).
 
 ## Contributing
 
