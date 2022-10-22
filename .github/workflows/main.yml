@@ -5,9 +5,11 @@ name: Deploy Site
 # Controls when the workflow will run
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [main]
+  # The below rule invokes when ANY pull request is made to main
+  # This is DANGEROUS and can allow for malicious behavior
+  # pull_request:
+  #   branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
