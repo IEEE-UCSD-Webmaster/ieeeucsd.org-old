@@ -1,29 +1,34 @@
-/* Color vars should go here */
+/* Global CSS Properties */
 :root {
-	--main: #00629B;
-	--accent: #FFCD00;
-	--secondary: white;
-	--dark: #2A1A4E;
+	--main: #00629b;
+	--accent: #ffcd00;
+	--secondary: #ffffff;
+	--dark: #2a1a4e;
 }
 
 * {
 	scrollbar-width: auto;
 	scrollbar-color: var(--main) transparent;
 }
+
 *::-webkit-scrollbar {
 	width: 0.6em;
 	height: 0.6em;
 }
+
 *::-webkit-scrollbar-track {
 	background: var(--main);
 }
+
 *::-webkit-scrollbar-thumb {
 	background-color: var(--secondary);
 }
+
 html {
 	font-family: "Roboto", sans-serif;
 	font-weight: bold;
 }
+
 body {
 	margin: 0;
 }
@@ -41,6 +46,7 @@ a:hover {
 	display: flex;
 	flex-direction: column;
 }
+
 .topbar {
 	display: flex;
 	flex-direction: row;
@@ -50,20 +56,24 @@ a:hover {
 	padding: 0.5em;
 	align-items: center;
 }
+
 .topbar.burger-bar {
 	flex-direction: column;
 	position: relative;
 }
-.topbar.burger-bar > .img-cont {
+
+.topbar.burger-bar>.img-cont {
 	align-self: flex-start;
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	align-items: center;
 }
+
 .img-cont img {
 	width: 22em;
 }
+
 .burger {
 	font-size: 2.8em;
 	font-weight: normal;
@@ -71,26 +81,31 @@ a:hover {
 	cursor: pointer;
 	margin-right: 0.3em;
 }
+
 .link-items.burger-time {
 	flex-direction: column;
 	position: absolute;
 	background-color: var(--secondary);
 	width: 10em;
-	box-shadow: rgba(0,0,0,0.3) 4px 4px 3px 0px;
+	box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 3px 0px;
 	right: 0;
 	margin-top: 0.36em;
 }
-.link-items.burger-time > a {
+
+.link-items.burger-time>a {
 	margin: 0;
 	padding: 0.4em 0.75em;
 }
-.link-items.burger-time > a:hover {
-	background-color: rgba(0,0,0,0.1);
+
+.link-items.burger-time>a:hover {
+	background-color: rgba(0, 0, 0, 0.1);
 }
+
 .navlink {
 	font-size: 1.1em;
 	margin: 0.75em;
 }
+
 .splash {
 	background-color: var(--main);
 	background-blend-mode: overlay;
@@ -104,6 +119,7 @@ a:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
 .call-to-action {
 	font-size: 3.2em;
 	width: 11em;
@@ -111,16 +127,20 @@ a:hover {
 	text-align: center;
 	font-family: "Montserrat";
 }
+
 .splash-socials {
 	margin-top: 2em;
 }
-.splash-socials > a {
+
+.splash-socials>a {
 	margin-left: 1.5em;
 	margin-right: 1.5em;
 }
+
 .splash-socials img {
 	width: 4.7em;
 }
+
 .default-section {
 	display: flex;
 	align-items: center;
@@ -131,28 +151,34 @@ a:hover {
 	padding-top: 2em;
 	padding-bottom: 2em;
 }
+
 .section-title {
 	font-size: 3em;
 	margin-top: 0.8em;
 	margin-bottom: 0.8em;
 }
-.default-section > p, .project-space > p {
+
+.default-section>p,
+.project-space>p {
 	font-size: 1.8em;
 	width: 22em;
 	color: var(--dark);
 	text-align: center;
 }
-.project-space > p {
+
+.project-space>p {
 	color: var(--secondary);
 }
-.default-section > p:first-child {
+
+.default-section>p:first-child {
 	margin-top: 0;
 }
+
 .project-space {
 	border-radius: 50% 50% 0 0 / 4rem;
 	background-color: var(--main);
 	background-blend-mode: overlay;
-	background-image: url("../img/backgrounds/ps.png");
+	background-image: url("../img/backgrounds/ps.webp");
 	height: 40em;
 	display: flex;
 	justify-content: center;
@@ -161,32 +187,39 @@ a:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
 .project-space a {
 	color: var(--accent);
 }
+
 .ps-title {
 	font-size: 3em;
 	color: white;
 	margin-bottom: 1em;
 }
+
 .visit-us {
 	font-size: 2em;
 	margin-bottom: 2em;
 }
+
 .ex-link {
 	color: var(--accent);
 	font-size: 2em;
 	margin-bottom: 2em;
 }
+
 .involved {
 	border-radius: 50% 50% 0 0 / 4rem;
 	transform: translateY(-4rem);
 }
+
 .cards {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+
 .involve-card {
 	padding: 1.75em 2.5em;
 	border: var(--main) solid 0.37em;
@@ -198,32 +231,41 @@ a:hover {
 	flex-direction: column;
 	margin: 1em;
 }
+
 .involve-title {
 	font-size: 3em;
 	color: var(--main);
 	margin-bottom: 0.5em;
 }
-.involve-card > img {
+
+.involve-card>img {
 	width: 20em;
 	margin-bottom: 1em;
+	border-radius: 0.2em;
 }
+
 .links {
 	font-size: 1.5em;
 }
+
 .social-card {
 	display: flex;
 	align-items: center;
 	padding: 1em;
 	width: 25em;
 }
-.social-card > img  {
+
+.social-card>img {
 	width: 4.7em;
 }
+
 .social-message {
 	font-size: 2em;
 	padding: 0.5em;
 }
-.join-scls, .footer-scls {
+
+.join-scls,
+.footer-scls {
 	display: flex;
 	flex-direction: row;
 	max-width: 55em;
@@ -231,6 +273,7 @@ a:hover {
 	flex-wrap: wrap;
 	margin-left: 5em;
 }
+
 .carousel-item {
 	display: flex;
 	flex-direction: column;
@@ -240,45 +283,58 @@ a:hover {
 	border-radius: 1em;
 	margin: 1em;
 }
-.carousel-item > img {
+
+.carousel-item>img {
 	width: 18.7em;
+	border-radius: 0.2em;
 }
+
 .carousel-name {
 	font-size: 2em;
 }
+
 .carousel-pos {
 	font-style: italic;
 	font-weight: normal;
 	font-size: 1.25em;
 }
+
 .carousel-email {
 	margin-top: 0.5em;
 }
+
 .carousel-page {
 	display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 	justify-content: center;
 }
+
 .carousel {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+
 .carousel-left {
 	margin-left: 2em;
 	transform: scaleX(-1);
 }
-.carousel-right, .carousel-left {
+
+.carousel-right,
+.carousel-left {
 	cursor: pointer;
 	width: 4em;
 }
+
 .carousel-right {
 	margin-right: 2em;
 }
+
 .contact {
 	border-radius: 0 0 50% 50% / 4rem;
 	transform: translateY(4rem);
 }
+
 .footer {
 	background-color: var(--main);
 	padding-top: 7em;
@@ -288,18 +344,22 @@ a:hover {
 	padding-left: 2em;
 	padding-right: 2em;
 }
+
 .footer a {
 	color: white;
 }
+
 .footer-scls {
 	max-width: 30em;
 	font-size: 0.6em;
 	margin-bottom: 2em;
 }
+
 .footer-scls img {
 	width: 4.7em;
 }
-.footer > img {
+
+.footer>img {
 	width: 30em;
 }
 
@@ -309,27 +369,33 @@ a:hover {
 		font-size: 0.85em;
 	}
 }
+
 @media screen and (max-width: 650px) {
 	html {
 		font-size: 0.8em;
 	}
-	.footer > img{
+
+	.footer>img {
 		width: 15em;
 	}
 }
+
 @media screen and (max-width: 540px) {
 	html {
 		font-size: 0.6em;
 	}
+
 	.footer>img {
 		display: none;
 	}
 }
+
 @media screen and (max-width: 420px) {
 	html {
 		font-size: 0.5em;
 	}
 }
+
 @media screen and (max-width: 320px) {
 	html {
 		font-size: 0.45em;
@@ -337,9 +403,9 @@ a:hover {
 }
 
 #cal {
-	border:solid 1px #777;
+	border: solid 1px #777;
 	width: 800px;
-	height: 600px; 
+	height: 600px;
 }
 
 #calendar {
@@ -354,6 +420,6 @@ a:hover {
 
 iframe {
 	width: 80vw;
-    height: 600px;
-    max-width: 1000px;
+	height: 600px;
+	max-width: 1000px;
 }
