@@ -69,7 +69,7 @@ export default class TopBar extends Component<TopBarProps, TopBarState> {
                     >
                         {this.props.links.map((l) => {
                             return (
-                                <a className="navlink" href={l.url}>
+                                <a className="navlink" href={l.url} key={l.url}>
                                     {l.name}
                                 </a>
                             );

@@ -1,8 +1,7 @@
-import express from "express";
+import express, { NextFunction } from "express";
 import { Request, Response } from "express";
 import * as path from "path";
 import * as fs from "fs";
-import UserDatabase from "./Database";
 
 interface Website {
     [key: string]: string;
@@ -66,7 +65,7 @@ const PORT = 9000;
 // Make the public directory traversible to people online
 APP.use(express.static(path.join(__dirname, "public")));
 // Put the cookies as a variable in the request
-APP.use((req: Request, res: Response, next: any) => {
+APP.use((req: Request, res: Response, next: NextFunction) => {
     req.cookies = req.headers.cookie;
     next();
 });
@@ -94,7 +93,7 @@ APP.get("/contact", (req: Request, res: Response) => {
 /**
  * Utility functions for above methods
  */
-function respond(res: any, filename: string) {
+function respond(res: Response, filename: string) {
     res.set({
         "Content-Type": "text/html",
     });
@@ -102,19 +101,21 @@ function respond(res: any, filename: string) {
 }
 
 function generatePage(name: string): string {
-    let site = WEBSITES.find((e) => e.sitename === name);
+    const site = WEBSITES.find((e) => e.sitename === name);
     let html = TEMPLATE;
-    for (let key of Object.keys(site)) {
+    let key;
+    for (key of Object.keys(site)) {
         html = html.replace(new RegExp("\\$" + key.toUpperCase()), site[key]);
     }
     return html;
 }
 
 function generateFilePages() {
-    for (let site of WEBSITES) {
-        let html = generatePage(site.sitename);
+    let site;
+    for (site of WEBSITES) {
+        const html = generatePage(site.sitename);
         fs.writeFileSync(
-            require("path").join(__dirname, "public/", `${site.sitename}.html`),
+            path.join(__dirname, "public/", `${site.sitename}.html`),
             html
         );
     }

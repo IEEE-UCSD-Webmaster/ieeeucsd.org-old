@@ -6,12 +6,8 @@ interface CarouselPageProps {
     items: CarouselItemProps[];
     visible: boolean;
 }
-interface CarouselPageState {}
 
-export default class CarouselPage extends Component<
-    CarouselPageProps,
-    CarouselPageState
-> {
+export default class CarouselPage extends Component<CarouselPageProps> {
     constructor(props: CarouselPageProps) {
         super(props);
         this.state = {};
@@ -24,7 +20,7 @@ export default class CarouselPage extends Component<
                 style={this.props.visible ? {} : { display: "none" }}
             >
                 {this.props.items.map((n) => (
-                    <CarouselItem {...n}></CarouselItem>
+                    <CarouselItem {...n} key={n.name}></CarouselItem>
                 ))}
             </div>
         );

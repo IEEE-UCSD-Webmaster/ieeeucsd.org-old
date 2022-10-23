@@ -25,7 +25,7 @@ export const ACTIVE_PAGES = [
 // Urls of team photos that will go in the "About" slideshow
 export const TEAM_PHOTOS: string[] = [];
 export const PROJECT_SPACE: string[] = [];
-export const EVENTS: any[] = [];
+export const EVENTS: unknown[] = [];
 
 export const SOCIALS = [
     {

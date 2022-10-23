@@ -38,7 +38,7 @@ export default class Carousel extends Component<CarouselProps, CarouselState> {
     }
 
     public render() {
-        let arr = this.chunkArray(this.props.items);
+        const arr = this.chunkArray(this.props.items);
         return (
             <div className="carousel">
                 <img
@@ -52,6 +52,7 @@ export default class Carousel extends Component<CarouselProps, CarouselState> {
                 <div className="carousel-items">
                     {arr.map((items, i) => (
                         <CarouselPage
+                            key={i}
                             items={items}
                             visible={i === this.state.page}
                         ></CarouselPage>
@@ -72,7 +73,7 @@ export default class Carousel extends Component<CarouselProps, CarouselState> {
     }
 
     private chunkArray(array: CarouselItemProps[]): CarouselItemProps[][] {
-        let returnArr = [] as CarouselItemProps[][];
+        const returnArr = [] as CarouselItemProps[][];
         for (let i = 0; i < array.length; i += this.props.itemsPerPage) {
             returnArr.push(array.slice(i, i + this.props.itemsPerPage));
         }

@@ -6,12 +6,8 @@ interface DefaultSectionProps {
     paragraphs?: string[];
     className?: string;
 }
-interface DefaultSectionState {}
 
-export default class DefaultSection extends Component<
-    DefaultSectionProps,
-    DefaultSectionState
-> {
+export default class DefaultSection extends Component<DefaultSectionProps> {
     constructor(props: DefaultSectionProps) {
         super(props);
         this.state = {};
@@ -27,9 +23,10 @@ export default class DefaultSection extends Component<
                 <div className="section-title">{this.props.title}</div>
                 {(this.props.paragraphs ? this.props.paragraphs : []).map(
                     (n) => (
-                        <p>{n}</p>
+                        <p key={n}>{n}</p>
                     )
                 )}
+                {/* eslint-disable-next-line react/prop-types */}
                 {this.props.children}
             </div>
         );

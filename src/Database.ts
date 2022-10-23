@@ -1,4 +1,4 @@
-import { Schema, Document, LeanDocument } from "mongoose";
+import { Schema, Document } from "mongoose";
 import * as mongoose from "mongoose";
 import { promisify } from "util";
 import { randomBytes, pbkdf2 } from "crypto";
@@ -99,7 +99,7 @@ export default class UserDatabase {
      * @param newPassword the user's new password
      */
     public async setPassword(uuid: string, newPassword: string) {
-        let hashsalt = await UserDatabase.hash(newPassword);
+        const hashsalt = await UserDatabase.hash(newPassword);
         await User.findOneAndUpdate(
             { uuid: uuid },
             { password: hashsalt }
@@ -191,7 +191,7 @@ export default class UserDatabase {
         title?: string,
         isOfficer?: boolean
     ): Promise<void> {
-        let encrypted = await UserDatabase.hash(password);
+        const encrypted = await UserDatabase.hash(password);
         await new User({
             display: display,
             email: email,
@@ -210,8 +210,8 @@ export default class UserDatabase {
      * @returns the hashed password
      */
     public static async hash(password: string): Promise<HashSalt> {
-        let salt = randomBytes(UserDatabase.SALT_LENGTH);
-        let pass = Buffer.from(String.prototype.normalize(password));
+        const salt = randomBytes(UserDatabase.SALT_LENGTH);
+        const pass = Buffer.from(String.prototype.normalize(password));
         return {
             hash: await pbkdf(
                 pass,

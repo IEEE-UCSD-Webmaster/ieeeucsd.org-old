@@ -21,7 +21,7 @@ export default class Splash extends Component<SplashProps, SplashState> {
         this.interval = setInterval(
             this.changeImage.bind(this),
             this.props.delay
-        ) as any as number;
+        ) as unknown as number;
     }
 
     private changeImage(): void {

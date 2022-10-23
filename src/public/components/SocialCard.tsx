@@ -6,12 +6,8 @@ interface SocialCardProps {
     image: string;
     message: string;
 }
-interface SocialCardState {}
 
-export default class SocialCard extends Component<
-    SocialCardProps,
-    SocialCardState
-> {
+export default class SocialCard extends Component<SocialCardProps> {
     constructor(props: SocialCardProps) {
         super(props);
         this.state = {};
