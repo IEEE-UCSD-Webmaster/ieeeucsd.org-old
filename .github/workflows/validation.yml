@@ -6,8 +6,8 @@ jobs:
     validate:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@latest
-            - uses: actions/setup-node@latest
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
             - name: Install Dependencies
               run: npm ci
             - name: Run eslint
