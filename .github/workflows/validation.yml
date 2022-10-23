@@ -1,0 +1,14 @@
+name: Validation Testing
+
+on: [push, pull_request]
+
+jobs:
+    validate:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@latest
+            - uses: actions/setup-node@latest
+            - name: Install Dependencies
+              run: npm ci
+            - name: Run eslint
+              run: npm run lint
