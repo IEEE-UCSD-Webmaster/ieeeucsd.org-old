@@ -10,10 +10,11 @@ import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 
 class Main extends React.Component {
-    constructor(props: any) {
-        super(props);
+    constructor() {
+        super({});
         this.state = {};
     }
+
     public render() {
         return (
             <>

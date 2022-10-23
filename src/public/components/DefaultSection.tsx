@@ -5,6 +5,7 @@ interface DefaultSectionProps {
     title: string;
     paragraphs?: string[];
     className?: string;
+    children?: React.ReactNode;
 }
 
 export default class DefaultSection extends Component<DefaultSectionProps> {
@@ -26,7 +27,6 @@ export default class DefaultSection extends Component<DefaultSectionProps> {
                         <p key={n}>{n}</p>
                     )
                 )}
-                {/* eslint-disable-next-line react/prop-types */}
                 {this.props.children}
             </div>
         );

@@ -1,7 +1,5 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
-const LicensePlugin = require("license-webpack-plugin").LicenseWebpackPlugin;
-const TerserPlugin = require("terser-webpack-plugin");
 const fs = require("fs");
 
 module.exports = {
@@ -10,6 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, "build/public"),
         filename: "./js/[name].js",
     },
+    mode: "production",
     module: {
         rules: [
             {
@@ -29,44 +28,24 @@ module.exports = {
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
     },
-    mode: "production",
     plugins: [
         new CopyPlugin({
             patterns: [
                 {
-                    from: "./src/public",
-                    to: ".",
-                    globOptions: {
-                        ignore: ["**/*.tsx", "**/*.ts"],
-                    },
+                    from: "./src/util",
                 },
             ],
         }),
-        new LicensePlugin({
-            outputFilename: "third-party-notice.txt",
-        }),
     ],
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                terserOptions: {
-                    output: {
-                        comments: false,
-                    },
-                },
-                extractComments: false,
-            }),
-        ],
-    },
-    //devtool: "source-map"
-    devServer: {
-        static: "./build/public",
-    },
 };
 
+/**
+ * Load all entries from a directory
+ * @param {*} dir Directory to load entries from
+ * @returns Object with entries
+ */
 function loadEntries(dir) {
-    let files = fs.readdirSync(path.join(__dirname, dir));
+    const files = fs.readdirSync(path.join(__dirname, dir));
     let entries = {};
     files.forEach((file) => {
         let name = file.match(/^(.*)\.tsx$/);

@@ -4,8 +4,8 @@ import SocialCard from "./SocialCard";
 import { EMAIL_WHITE, SOCIALS_WHITE } from "../Config";
 
 export default class Footer extends Component {
-    constructor(props: any) {
-        super(props);
+    constructor() {
+        super({});
         this.state = {};
     }
 

@@ -1,27 +1,20 @@
 {
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true,
-        "jest": true,
-        "node": true
-    },
+    "root": true,
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
     ],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "@typescript-eslint/no-unsafe-argument": "warn",
+        "@typescript-eslint/no-unsafe-assignment": "warn",
+        "@typescript-eslint/unbound-method": "warn"
+    },
     "overrides": [],
     "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest"
-    },
-    "plugins": ["react", "@typescript-eslint"],
-    "rules": {},
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
-    },
-    "ignorePatterns": ["node_modules/", "dist/", "build/", "webpack.config.*"]
+    "plugins": ["@typescript-eslint"],
+    "ignorePatterns": ["node_modules", "build", "webpack**", "src/public/"]
 }
