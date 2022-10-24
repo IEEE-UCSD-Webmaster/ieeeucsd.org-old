@@ -424,3 +424,17 @@ iframe {
 	height: 600px;
 	max-width: 1000px;
 }
+
+.project-desc {
+	display: flex;
+    justify-content: center;
+	column-gap: 10em;
+    vertical-align: middle;
+	flex-wrap: wrap;
+}
+
+.project-desc img {
+	width: 30em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}

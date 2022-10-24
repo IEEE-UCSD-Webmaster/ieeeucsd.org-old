@@ -23,49 +23,29 @@ class Main extends React.Component {
                     delay={2000}
                     backgrounds={["img/backgrounds/robocar.webp"]}
                 ></Splash>
-                <DefaultSection
-                    title="RoboCup"
-                    paragraphs={[
-                        '"RoboCup is an international scientific initiative with the goal to advance the state of the art of intelligent robots. When established in 1997, the original mission was to field a team of robots capable of winning against the human soccer World Cup champions by 2050."',
-                        "IEEE hosts Robocup Soccer, an annual project where teams develop six robots to compete with other teams during Robofest. Join this hands-on project to explore computer vision, mechanical design, and microcontroller development!",
-                    ]}
-                >
-                    <a className="ex-link" href="https://www.robocup.org/">
-                        RoboCup website
-                    </a>
-                </DefaultSection>
-                <DefaultSection
-                    title="Quarterly Projects"
-                    paragraphs={[
-                        "Getting started on hardware development or want to make your own project? IEEE's Quarterly Projects aims to provide students with project experience in a span of 10 weeks. During QP, students will acquire skills used in the industry such as C++ and the prototyping process with the assistance of our mentors.",
-                    ]}
-                >
-                    <a
-                        className="ex-link"
-                        href="https://forms.gle/eW6e1i3vWCdBj7Vn6"
+
+
+                <div className="project-desc">
+                    <DefaultSection
+                        title="Continuous Projects"
+                        paragraphs={[
+                            "Looking to use your developed skills or get involved in a project that competes with other schools? Annual projects allow students to become more acquainted with computer vision and embedded systems while building connections with other schools and students."
+                        ]}
                     >
-                        Apply here
-                    </a>
-                </DefaultSection>
-                <DefaultSection className={"past-proj"} title="Past Projects">
-                    <div className="cards">
-                        <InvolveBox
-                            boxTitle=""
-                            image="img/backgrounds/robocar.webp"
-                            description="'22 Robocar Competition"
-                        ></InvolveBox>
-                        <InvolveBox
-                            boxTitle=""
-                            image="img/backgrounds/micromouse.webp"
-                            description="'22 Micromouse Competition"
-                        ></InvolveBox>
-                        <InvolveBox
-                            boxTitle=""
-                            image="img/backgrounds/sp22qp.webp"
-                            description="'22 Spring QP Showcase"
-                        ></InvolveBox>
-                    </div>
-                </DefaultSection>
+                    </DefaultSection>
+                    <img src="img/backgrounds/micromouse.webp"></img>
+                </div>
+
+                <div className="project-desc">
+                    <DefaultSection
+                        title="Quarterly Projects"
+                        paragraphs={[
+                            "Getting started on hardware development or want to make your own project? IEEE's Quarterly Projects aims to provide students with project experience in a span of 10 weeks. During QP, students will acquire skills used in the industry such as C++ and the prototyping process with the assistance of our mentors."
+                        ]}
+                    >
+                    </DefaultSection>
+                    <img src="img/backgrounds/sp22qp.webp"></img>
+                </div>
 
                 <div id="contact-us">
                     <DefaultSection
