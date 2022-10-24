@@ -6,12 +6,8 @@ interface InvolveBoxProps {
     image: string;
     description: string;
 }
-interface InvolveBoxState {}
 
-export default class InvolveBox extends Component<
-    InvolveBoxProps,
-    InvolveBoxState
-> {
+export default class InvolveBox extends Component<InvolveBoxProps> {
     constructor(props: InvolveBoxProps) {
         super(props);
         this.state = {};

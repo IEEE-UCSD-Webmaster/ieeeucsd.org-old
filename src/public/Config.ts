@@ -25,7 +25,7 @@ export const ACTIVE_PAGES = [
 // Urls of team photos that will go in the "About" slideshow
 export const TEAM_PHOTOS: string[] = [];
 export const PROJECT_SPACE: string[] = [];
-export const EVENTS: any[] = [];
+export const EVENTS: unknown[] = [];
 
 export const SOCIALS = [
     {
@@ -44,6 +44,7 @@ export const SOCIALS = [
         message: "@ieeeucsd",
     },
 ];
+
 export const EMAIL = [
     {
         icon: "img/email.svg",
@@ -51,6 +52,7 @@ export const EMAIL = [
         message: "ieee@eng.ucsd.edu",
     },
 ];
+
 export const EMAIL_WHITE = [
     {
         icon: "img/email_white.svg",

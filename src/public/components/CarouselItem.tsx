@@ -7,12 +7,8 @@ export interface CarouselItemProps {
     email: string;
     photo: string;
 }
-interface CarouselItemState {}
 
-export default class CarouselItem extends Component<
-    CarouselItemProps,
-    CarouselItemState
-> {
+export default class CarouselItem extends Component<CarouselItemProps> {
     constructor(props: CarouselItemProps) {
         super(props);
         this.state = {};

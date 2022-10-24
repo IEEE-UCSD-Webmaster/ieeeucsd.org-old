@@ -20,14 +20,18 @@ export default class TopBar extends Component<TopBarProps, TopBarState> {
             showBurger: this.shouldShowBurger(),
             menuVisible: false,
         };
+        this.toggleMenu.bind(this);
         window.addEventListener("resize", this.checkResize.bind(this));
     }
+
     private toggleMenu() {
         this.setState({ menuVisible: !this.state.menuVisible });
     }
+
     private checkResize() {
         this.setState({ showBurger: this.shouldShowBurger() });
     }
+
     private shouldShowBurger(): boolean {
         return window.innerWidth < TopBar.HAMBURGER_POINT;
     }
@@ -48,7 +52,7 @@ export default class TopBar extends Component<TopBarProps, TopBarState> {
                         style={{
                             display: this.state.showBurger ? "initial" : "none",
                         }}
-                        onClick={this.toggleMenu.bind(this)}
+                        onClick={this.toggleMenu}
                         role="menubar"
                     >
                         ≡
@@ -69,7 +73,7 @@ export default class TopBar extends Component<TopBarProps, TopBarState> {
                     >
                         {this.props.links.map((l) => {
                             return (
-                                <a className="navlink" href={l.url}>
+                                <a className="navlink" href={l.url} key={l.url}>
                                     {l.name}
                                 </a>
                             );

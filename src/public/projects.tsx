@@ -1,22 +1,19 @@
 import * as ReactDom from "react-dom";
 import * as React from "react";
 import TopBar from "./components/TopBar";
-import { ACTIVE_PAGES, SOCIALS, EMAIL, OFFICERS } from "./Config";
+import { ACTIVE_PAGES, SOCIALS, EMAIL } from "./Config";
 import Splash from "./components/Splash";
 import DefaultSection from "./components/DefaultSection";
 import InvolveBox from "./components/InvolveBox";
 import SocialCard from "./components/SocialCard";
-import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 
-interface MainProps {}
-interface MainState {}
-
-class Main extends React.Component<MainProps, MainState> {
-    constructor(props: MainProps) {
-        super(props);
+class Main extends React.Component {
+    constructor() {
+        super({});
         this.state = {};
     }
+
     public render() {
         return (
             <>
@@ -78,6 +75,7 @@ class Main extends React.Component<MainProps, MainState> {
                         <div className="join-scls">
                             {[...EMAIL, ...SOCIALS].map((n) => (
                                 <SocialCard
+                                    key={n.url} // Hacky fix: use url as key
                                     url={n.url}
                                     image={n.icon}
                                     message={n.message}

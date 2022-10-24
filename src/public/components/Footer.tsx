@@ -3,12 +3,9 @@ import { Component } from "react";
 import SocialCard from "./SocialCard";
 import { EMAIL_WHITE, SOCIALS_WHITE } from "../Config";
 
-interface FooterProps {}
-interface FooterState {}
-
-export default class Footer extends Component<FooterProps, FooterState> {
-    constructor(props: FooterProps) {
-        super(props);
+export default class Footer extends Component {
+    constructor() {
+        super({});
         this.state = {};
     }
 
@@ -19,6 +16,7 @@ export default class Footer extends Component<FooterProps, FooterState> {
                 <div className="footer-scls">
                     {[...EMAIL_WHITE, ...SOCIALS_WHITE].map((n) => (
                         <SocialCard
+                            key={n.url}
                             url={n.url}
                             image={n.icon}
                             message={n.message}

@@ -9,14 +9,12 @@ import SocialCard from "./components/SocialCard";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
 
-interface MainProps {}
-interface MainState {}
-
-class Main extends React.Component<MainProps, MainState> {
-    constructor(props: MainProps) {
-        super(props);
+class Main extends React.Component {
+    constructor() {
+        super({});
         this.state = {};
     }
+
     public render() {
         return (
             <>
@@ -84,6 +82,7 @@ class Main extends React.Component<MainProps, MainState> {
                         <div className="join-scls">
                             {[...EMAIL, ...SOCIALS].map((n) => (
                                 <SocialCard
+                                    key={n.url}
                                     url={n.url}
                                     image={n.icon}
                                     message={n.message}
