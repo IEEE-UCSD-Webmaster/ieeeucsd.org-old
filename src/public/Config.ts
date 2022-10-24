@@ -221,7 +221,7 @@ export const OFFICERS = [
     {
         name: "Raymond Wang",
         position: "Webmaster",
-        photo: "img/officers/temp.png",
+        photo: "img/officers/raymond.png",
         email: "raymond@ucsd.edu",
     },
     {
