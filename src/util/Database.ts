@@ -98,10 +98,10 @@ export default class UserDatabase {
      * @param uuid the UUID of the user
      * @returns the user's email
      */
-    public async getEmail(uuid: string): Promise<string> {
-        const user = await User.findOne({ uuid: uuid }).lean().exec();
-        return user.email.text;
-    }
+    // public async getEmail(uuid: string): Promise<string> {
+    //     const user = await User.findOne({ uuid: uuid }).lean().exec();
+    //     return user.email.text;
+    // }
 
     /**
      * Updates a user's password
@@ -120,10 +120,10 @@ export default class UserDatabase {
      * @param uuid the UUID of the user
      * @returns the user's password
      */
-    public async getPasswordHash(uuid: string): Promise<Buffer> {
-        const user = await User.findOne({ uuid: uuid }).lean().exec();
-        return user.password.hash;
-    }
+    // public async getPasswordHash(uuid: string): Promise<Buffer> {
+    //     const user = await User.findOne({ uuid: uuid }).lean().exec();
+    //     return user.password.hash;
+    // }
 
     /**
      * Updates a member's position

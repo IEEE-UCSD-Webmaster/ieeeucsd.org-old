@@ -18,7 +18,7 @@ export const ACTIVE_PAGES = [
     },
     {
         name: "Contact Us",
-        url: "/contact",
+        url: "/#contact-us",
     },
 ];
 
