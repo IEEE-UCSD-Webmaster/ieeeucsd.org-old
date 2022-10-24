@@ -107,7 +107,7 @@ function respond(res: Response, filename: string) {
 function generatePage(name: string): string {
     const site = WEBSITES.find((e) => e.sitename === name);
     let html = TEMPLATE;
-    let key;
+    let key: string;
     for (key of Object.keys(site)) {
         html = html.replace(new RegExp("\\$" + key.toUpperCase()), site[key]);
     }
@@ -115,7 +115,7 @@ function generatePage(name: string): string {
 }
 
 function generateFilePages() {
-    let site;
+    let site: Website;
     for (site of WEBSITES) {
         const html = generatePage(site.sitename);
         fs.writeFileSync(
