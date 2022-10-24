@@ -143,7 +143,7 @@ export const OFFICERS = [
     {
         name: "Matthew Mikhailov",
         position: "Supercomputing Chair",
-        photo: "img/officers/temp.png",
+        photo: "img/officers/matthew.jpg",
         email: "email@ucsd.edu",
     },
     {
@@ -155,7 +155,7 @@ export const OFFICERS = [
     {
         name: "Sanh Nguyen",
         position: "Quarterly Projects Chair",
-        photo: "img/officers/temp.png",
+        photo: "img/officers/sanh.jpg",
         email: "email@ucsd.edu",
     },
     {
@@ -179,13 +179,13 @@ export const OFFICERS = [
     {
         name: "Yusuf Morsi",
         position: "Technical Chair",
-        photo: "img/officers/temp.png",
+        photo: "img/officers/yusuf.jpg",
         email: "email@ucsd.edu",
     },
     {
         name: "Shaun Garcia",
         position: "Technical Chair",
-        photo: "img/officers/temp.png",
+        photo: "img/officers/shaun.jpg",
         email: "email@ucsd.edu",
     },
     {
