@@ -49,15 +49,7 @@ const WEBSITES = [
         jsfile: "js/committees.js",
         cssfile: "css/styles.css",
         themecolor: "",
-    },
-    {
-        sitename: "contact",
-        title: "IEEE at UCSD",
-        description: "",
-        jsfile: "js/index.js",
-        cssfile: "css/styles.css",
-        themecolor: "",
-    },
+    }
 ] as Website[];
 
 const PORT = 9000;
@@ -88,10 +80,6 @@ APP.get("/projects", (req: Request, res: Response) => {
 
 APP.get("/committees", (req: Request, res: Response) => {
     respond(res, "committees");
-});
-
-APP.get("/contact", (req: Request, res: Response) => {
-    respond(res, "contact");
 });
 
 /**
