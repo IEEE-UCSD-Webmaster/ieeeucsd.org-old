@@ -31,6 +31,7 @@ jobs:
             # Builds the react site for github pages
             - name: Build Static Pages
               run: |
+                  rm .gitignore
                   npm ci
                   npm run build
                   mv build/public docs
