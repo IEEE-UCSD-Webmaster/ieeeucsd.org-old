@@ -23,7 +23,6 @@ jobs:
         # Use production environment specified in GitHub settings
         environment: production
         env:
-            NODE_ENV: ${{ secrets.NODE_ENV }}
             GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
         # Steps represent a sequence of tasks that will be executed as part of the job
         steps:
