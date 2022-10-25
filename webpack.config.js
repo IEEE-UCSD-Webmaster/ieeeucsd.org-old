@@ -32,7 +32,20 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
+                    // Copy utility files
                     from: "./src/util",
+                    to: "../util",
+                    globOptions: {
+                        ignore: ["**/*.ts", "**/*.tsx"],
+                    },
+                },
+                {
+                    // Copy public files
+                    from: "./src/public",
+                    to: "./",
+                    globOptions: {
+                        ignore: ["**/*.ts", "**/*.tsx"],
+                    },
                 },
             ],
         }),
