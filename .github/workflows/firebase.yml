@@ -2,7 +2,7 @@ name: deploy-production
 
 on:
     pull_request:
-        branches: [main]
+        branches: [firebase]
 
 jobs:
     build-and-deploy:
