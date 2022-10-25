@@ -31,10 +31,9 @@ jobs:
             # Builds the react site for github pages
             - name: Build Static Pages
               run: |
-                  export NODE_ENV=production GOOGLE_ANALYTICS_ID=UA-85129590-1
                   npm i
                   rm .gitignore
-                  npm run build
+                  NODE_ENV=production GOOGLE_ANALYTICS_ID=UA-85129590-1 npm run build
                   mv CNAME build/public
                   mv build/public docs
                   echo "# DO NOT MANUALLY PUSH TO THIS BRANCH, ANY WORK DONE WILL BE ERASED. ITS WORK COMES FROM MASTER AND IT WILL BE REWRITTEN THE NEXT TIME AN ACTION OCCURS ON THE MASTER BRANCH" > README.md
