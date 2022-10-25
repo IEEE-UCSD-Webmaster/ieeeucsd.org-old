@@ -6,7 +6,7 @@ module.exports = {
     entry: loadEntries("./src/public"),
     output: {
         path: path.resolve(__dirname, "build/public"),
-        filename: "./js/[name].js",
+        filename: "./assets/js/[name].js",
     },
     mode: "production",
     module: {
@@ -32,19 +32,11 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    // Copy utility files
-                    from: "./src/util",
-                    to: "../util",
-                    globOptions: {
-                        ignore: ["**/*.ts", "**/*.tsx"],
-                    },
-                },
-                {
-                    // Copy public files
-                    from: "./src/public",
-                    to: "./",
-                    globOptions: {
-                        ignore: ["**/*.ts", "**/*.tsx"],
+                    // Copy non-ts, non-tsx files
+                    from: "./src",
+                    to: "../",
+                    filter: (resourcePath) => {
+                        return !resourcePath.match(/\.(tsx|ts)?$/);
                     },
                 },
             ],
