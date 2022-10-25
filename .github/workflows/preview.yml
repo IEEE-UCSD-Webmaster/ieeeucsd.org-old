@@ -3,7 +3,7 @@ name: deploy-preview
 on: pull_request
 
 jobs:
-    build_and_preview:
+    build-and-preview:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
@@ -13,7 +13,7 @@ jobs:
             - run: |
                   npm ci
                   npm run build
-            - uses: FirebaseExtended/action-hosting-deploy@v0
+            - uses: waymondrang/action-hosting-deploy@v0
               with:
                   repoToken: "${{ secrets.GITHUB_TOKEN }}"
                   firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
