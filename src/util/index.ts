@@ -83,9 +83,8 @@ APP.get("/committees", (req: Request, res: Response) => {
     respond(res, "committees");
 });
 
-/**
- * Utility functions for above methods
- */
+// Utility functions for above methods
+
 function respond(res: Response, filename: string) {
     res.set({
         "Content-Type": "text/html",
