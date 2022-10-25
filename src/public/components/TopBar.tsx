@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Component } from "react";
 
 interface TopBarProps {
     links: {
@@ -12,7 +11,7 @@ interface TopBarState {
     menuVisible: boolean;
 }
 
-export default class TopBar extends Component<TopBarProps, TopBarState> {
+export default class TopBar extends React.Component<TopBarProps, TopBarState> {
     private static HAMBURGER_POINT = 1290;
     constructor(props: TopBarProps) {
         super(props);
@@ -20,7 +19,7 @@ export default class TopBar extends Component<TopBarProps, TopBarState> {
             showBurger: this.shouldShowBurger(),
             menuVisible: false,
         };
-        this.toggleMenu.bind(this);
+        this.toggleMenu = this.toggleMenu.bind(this);
         window.addEventListener("resize", this.checkResize.bind(this));
     }
 

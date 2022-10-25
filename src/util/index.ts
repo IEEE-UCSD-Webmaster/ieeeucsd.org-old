@@ -15,8 +15,15 @@ interface Website {
 
 const APP = express();
 const TEMPLATE = fs
-    .readFileSync(path.join(__dirname, "public/template.html"))
+    .readFileSync(path.join(__dirname, "template.html"))
     .toString();
+
+const GOOGLE_ANALYTICS_ID = process.env.GOOGLE_ANALYTICS_ID;
+
+if (!GOOGLE_ANALYTICS_ID && process.env.NODE_ENV == "production") {
+    throw new Error("GOOGLE_ANALYTICS_ID environment variable not defined");
+}
+
 const WEBSITES = [
     {
         sitename: "index",
@@ -49,13 +56,13 @@ const WEBSITES = [
         jsfile: "js/committees.js",
         cssfile: "css/styles.css",
         themecolor: "",
-    }
+    },
 ] as Website[];
 
-const PORT = 9000;
+const PORT = process.env.PORT ?? 9000;
 
 // Make the public directory traversible to people online
-APP.use(express.static(path.join(__dirname, "public")));
+APP.use(express.static(path.join(__dirname, "../public")));
 // Put the cookies as a variable in the request
 APP.use((req: Request, res: Response, next: NextFunction) => {
     req.cookies = req.headers.cookie;
@@ -99,6 +106,10 @@ function generatePage(name: string): string {
     for (key of Object.keys(site)) {
         html = html.replace(new RegExp("\\$" + key.toUpperCase()), site[key]);
     }
+    html = html.replace(
+        new RegExp("$GOOGLE_ANALYTICS_ID", "gm"),
+        GOOGLE_ANALYTICS_ID
+    );
     return html;
 }
 
@@ -107,7 +118,7 @@ function generateFilePages() {
     for (site of WEBSITES) {
         const html = generatePage(site.sitename);
         fs.writeFileSync(
-            path.join(__dirname, "public/", `${site.sitename}.html`),
+            path.join(__dirname, "../public/", `${site.sitename}.html`),
             html
         );
     }
