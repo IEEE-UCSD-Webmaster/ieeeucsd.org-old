@@ -32,8 +32,8 @@ jobs:
             - name: Build Static Pages
               run: |
                   export NODE_ENV=production GOOGLE_ANALYTICS_ID=UA-85129590-1
+                  npm i
                   rm .gitignore
-                  npm ci
                   npm run build
                   mv CNAME build/public
                   mv build/public docs
