@@ -18,12 +18,6 @@ const TEMPLATE = fs
     .readFileSync(path.join(__dirname, "template.html"))
     .toString();
 
-const GOOGLE_ANALYTICS_ID = process.env.GOOGLE_ANALYTICS_ID;
-
-if (!GOOGLE_ANALYTICS_ID && process.env.NODE_ENV == "production") {
-    throw new Error("GOOGLE_ANALYTICS_ID environment variable not defined");
-}
-
 const WEBSITES = [
     {
         sitename: "index",
@@ -106,10 +100,6 @@ function generatePage(name: string): string {
     for (key of Object.keys(site)) {
         html = html.replace(new RegExp("\\$" + key.toUpperCase()), site[key]);
     }
-    html = html.replace(
-        new RegExp("$GOOGLE_ANALYTICS_ID", "gm"),
-        GOOGLE_ANALYTICS_ID
-    );
     return html;
 }
 
