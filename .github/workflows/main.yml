@@ -22,6 +22,9 @@ jobs:
         runs-on: ubuntu-latest
         # Use production environment specified in GitHub settings
         environment: production
+        env:
+            NODE_ENV: ${{ secrets.NODE_ENV }}
+            GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
         # Steps represent a sequence of tasks that will be executed as part of the job
         steps:
             # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -33,7 +36,7 @@ jobs:
               run: |
                   npm i
                   rm .gitignore
-                  NODE_ENV=production GOOGLE_ANALYTICS_ID=UA-85129590-1 npm run build
+                  npm run build
                   mv CNAME build/public
                   mv build/public docs
                   echo "# DO NOT MANUALLY PUSH TO THIS BRANCH, ANY WORK DONE WILL BE ERASED. ITS WORK COMES FROM MASTER AND IT WILL BE REWRITTEN THE NEXT TIME AN ACTION OCCURS ON THE MASTER BRANCH" > README.md
