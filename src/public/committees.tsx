@@ -22,7 +22,7 @@ class Main extends React.Component {
                 <Splash
                     cta="The backbone of IEEE. Come help make a difference!"
                     delay={2000}
-                    backgrounds={["img/backgrounds/committee.webp"]}
+                    backgrounds={["/assets/img/backgrounds/committee.webp"]}
                 ></Splash>
                 <DefaultSection
                     title="Join us!"
@@ -34,27 +34,27 @@ class Main extends React.Component {
                     <div className="cards">
                         <InvolveBox
                             boxTitle=""
-                            image="img/committees/technical.webp"
+                            image="/assets/img/committees/technical.webp"
                             description="Technical Committee"
                         ></InvolveBox>
                         <InvolveBox
                             boxTitle=""
-                            image="img/committees/social.webp"
+                            image="/assets/img/committees/social.webp"
                             description="Social Committee"
                         ></InvolveBox>
                         <InvolveBox
                             boxTitle=""
-                            image="img/committees/professional.webp"
+                            image="/assets/img/committees/professional.webp"
                             description="Professional Committee"
                         ></InvolveBox>
                         <InvolveBox
                             boxTitle=""
-                            image="img/committees/pr.webp"
+                            image="/assets/img/committees/pr.webp"
                             description="PR Committee"
                         ></InvolveBox>
                         <InvolveBox
                             boxTitle=""
-                            image="img/committees/outreach.webp"
+                            image="/assets/img/committees/outreach.webp"
                             description="Outreach Committee"
                         ></InvolveBox>
                     </div>

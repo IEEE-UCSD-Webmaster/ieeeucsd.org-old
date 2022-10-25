@@ -12,7 +12,7 @@ export default class Footer extends Component {
     public render() {
         return (
             <div className="footer">
-                <img src="img/logo_white.svg"></img>
+                <img src="/assets/img/logo_white.svg"></img>
                 <div className="footer-scls">
                     {[...EMAIL_WHITE, ...SOCIALS_WHITE].map((n) => (
                         <SocialCard

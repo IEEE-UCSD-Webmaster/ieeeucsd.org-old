@@ -43,7 +43,7 @@ export default class Carousel extends Component<CarouselProps, CarouselState> {
             <div className="carousel">
                 <img
                     className="carousel-left"
-                    src="img/arrow.svg"
+                    src="/assets/img/arrow.svg"
                     style={
                         this.state.page === 0 ? { visibility: "hidden" } : {}
                     }
@@ -60,7 +60,7 @@ export default class Carousel extends Component<CarouselProps, CarouselState> {
                 </div>
                 <img
                     className="carousel-right"
-                    src="img/arrow.svg"
+                    src="/assets/img/arrow.svg"
                     style={
                         this.state.page === arr.length - 1
                             ? { visibility: "hidden" }

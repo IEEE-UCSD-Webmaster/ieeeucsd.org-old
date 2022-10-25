@@ -21,7 +21,7 @@ class Main extends React.Component {
                 <Splash
                     cta="Gain hands-on experience to make your resume stand out! No experience required!"
                     delay={2000}
-                    backgrounds={["img/backgrounds/robocar.webp"]}
+                    backgrounds={["/assets/img/backgrounds/robocar.webp"]}
                 ></Splash>
 
 
@@ -33,7 +33,7 @@ class Main extends React.Component {
                         ]}
                     >
                     </DefaultSection>
-                    <img src="img/backgrounds/micromouse.webp"></img>
+                    <img src="/assets/img/backgrounds/micromouse.webp"></img>
                 </div>
 
                 <div className="project-desc">
@@ -44,7 +44,7 @@ class Main extends React.Component {
                         ]}
                     >
                     </DefaultSection>
-                    <img src="img/backgrounds/sp22qp.webp"></img>
+                    <img src="/assets/img/backgrounds/sp22qp.webp"></img>
                 </div>
 
                 <div id="contact-us">
