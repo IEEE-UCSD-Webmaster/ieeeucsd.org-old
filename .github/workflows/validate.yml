@@ -1,4 +1,4 @@
-name: validate
+name: validation-testing
 
 on: [push, pull_request]
 
