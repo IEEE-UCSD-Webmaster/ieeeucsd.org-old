@@ -37,6 +37,8 @@ jobs:
                   echo "# DO NOT MANUALLY PUSH TO THIS BRANCH, ANY WORK DONE WILL BE ERASED. ITS WORK COMES FROM MASTER AND IT WILL BE REWRITTEN THE NEXT TIME AN ACTION OCCURS ON THE MASTER BRANCH" > README.md
             - name: Push to Deployment Branch
               run: |
+                  git config --global user.name 'github-actions[bot]'
+                  git config --global user.email 'github-actions[bot]@users.noreply.github.com'
                   git stash
                   git checkout -b page
                   git stash pop
