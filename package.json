@@ -1,5 +1,5 @@
 {
-  "name": "ieee-website",
+  "name": "ieee-uscd-website",
   "version": "1.0.0",
   "description": "Website for IEEE of UC San Diego",
   "main": "build/index.js",
