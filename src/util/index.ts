@@ -11,6 +11,7 @@ interface Website {
     jsfile: string;
     cssfile: string;
     themecolor: string;
+    path?: string;
 }
 
 const APP = express();
@@ -23,32 +24,33 @@ const WEBSITES = [
         sitename: "index",
         title: "IEEE at UCSD",
         description: "",
-        jsfile: "js/index.js",
-        cssfile: "css/styles.css",
+        jsfile: "/assets/js/index.js",
+        cssfile: "/assets/css/styles.css",
         themecolor: "",
+        path: "/",
     },
     {
         sitename: "events",
         title: "IEEE at UCSD",
         description: "",
-        jsfile: "js/events.js",
-        cssfile: "css/styles.css",
+        jsfile: "/assets/js/events.js",
+        cssfile: "/assets/css/styles.css",
         themecolor: "",
     },
     {
         sitename: "projects",
         title: "IEEE at UCSD",
         description: "",
-        jsfile: "js/projects.js",
-        cssfile: "css/styles.css",
+        jsfile: "/assets/js/projects.js",
+        cssfile: "/assets/css/styles.css",
         themecolor: "",
     },
     {
         sitename: "committees",
         title: "IEEE at UCSD",
         description: "",
-        jsfile: "js/committees.js",
-        cssfile: "css/styles.css",
+        jsfile: "/assets/js/committees.js",
+        cssfile: "/assets/css/styles.css",
         themecolor: "",
     },
 ] as Website[];
@@ -83,9 +85,8 @@ APP.get("/committees", (req: Request, res: Response) => {
     respond(res, "committees");
 });
 
-/**
- * Utility functions for above methods
- */
+// Utility functions for above methods
+
 function respond(res: Response, filename: string) {
     res.set({
         "Content-Type": "text/html",
@@ -107,8 +108,19 @@ function generateFilePages() {
     let site: Website;
     for (site of WEBSITES) {
         const html = generatePage(site.sitename);
+        fs.mkdirSync(
+            path.join(__dirname, "../public/", site.path ?? site.sitename),
+            {
+                recursive: true,
+            }
+        );
         fs.writeFileSync(
-            path.join(__dirname, "../public/", `${site.sitename}.html`),
+            path.join(
+                __dirname,
+                "../public/",
+                site.path ?? site.sitename,
+                "/index.html"
+            ),
             html
         );
     }

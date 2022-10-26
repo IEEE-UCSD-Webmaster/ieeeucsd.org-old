@@ -22,7 +22,7 @@ class Main extends React.Component {
                 <Splash
                     cta="Join the 2nd largest IEEE student branch in the US!"
                     delay={2000}
-                    backgrounds={["img/backgrounds/fa21qp.webp"]}
+                    backgrounds={["/assets/img/backgrounds/fa21qp.webp"]}
                 ></Splash>
                 <div id="about-us">
                     <DefaultSection
@@ -61,17 +61,17 @@ class Main extends React.Component {
                     <div className="cards">
                         <InvolveBox
                             boxTitle="Events"
-                            image="img/backgrounds/fa21social.webp"
+                            image="/assets/img/backgrounds/fa21social.webp"
                             description="Meet fellow IEEE members!"
                         ></InvolveBox>
                         <InvolveBox
                             boxTitle="Projects"
-                            image="img/backgrounds/robofest.webp"
+                            image="/assets/img/backgrounds/robofest.webp"
                             description="Learn new skills!"
                         ></InvolveBox>
                         <InvolveBox
                             boxTitle="Committees"
-                            image="img/backgrounds/gbm.webp"
+                            image="/assets/img/backgrounds/gbm.webp"
                             description="Build our amazing community!"
                         ></InvolveBox>
                     </div>

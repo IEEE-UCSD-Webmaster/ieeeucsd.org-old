@@ -20,7 +20,7 @@ class Main extends React.Component {
                 <Splash
                     cta="Come out to our events!"
                     delay={2000}
-                    backgrounds={["img/backgrounds/fa21social.webp"]}
+                    backgrounds={["/assets/img/backgrounds/fa21social.webp"]}
                 ></Splash>
 
                 <DefaultSection title="Events">
