@@ -44,7 +44,7 @@ export default class TopBar extends React.Component<TopBarProps, TopBarState> {
             >
                 <div className="img-cont">
                     <a href="/">
-                        <img src="img/logo.svg"></img>
+                        <img src="/assets/img/logo.svg"></img>
                     </a>
                     <div
                         className="burger"
