@@ -209,7 +209,7 @@ export const OFFICERS = [
     {
         name: "Matthew Yik",
         position: "Social Chair",
-        photo: "/assets/img/officers/temp.png",
+        photo: "/assets/img/officers/matthewyik.webp",
         email: "email@ucsd.edu",
     },
     {
