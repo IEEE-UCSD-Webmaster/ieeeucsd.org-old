@@ -1,11 +1,5 @@
-import {
-    NavigationHelpersContext,
-    useNavigation,
-    useNavigationState,
-} from "@react-navigation/native";
 import * as React from "react";
 import { Component } from "react";
-import { useNavigate } from "react-router-dom";
 
 interface InvolveBoxProps {
     boxTitle: string;
