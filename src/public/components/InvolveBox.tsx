@@ -27,7 +27,9 @@ export default class InvolveBox extends Component<InvolveBoxProps> {
                     className="involve-card"
                 >
                     <div className="involve-title">{this.props.boxTitle}</div>
-                    <img src={this.props.image}></img>
+                    <div className="involve-img">
+                        <img src={this.props.image}></img>
+                    </div>
                     <div className="involve-description">
                         {this.props.description}
                     </div>
@@ -37,7 +39,9 @@ export default class InvolveBox extends Component<InvolveBoxProps> {
             return (
                 <div className="involve-card">
                     <div className="involve-title">{this.props.boxTitle}</div>
-                    <img src={this.props.image}></img>
+                    <div className="involve-img">
+                        <img src={this.props.image}></img>
+                    </div>
                     <div className="involve-description">
                         {this.props.description}
                     </div>

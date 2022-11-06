@@ -248,17 +248,36 @@ a:hover {
     margin: 1em;
 }
 
+.involve-img {
+    display: inline-block;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 0.2em;
+}
+
+.involve-card img {
+    display: block;
+    transition: transform 0.4s;
+    width: 20em;
+    border-radius: 0.2em;
+}
+
+.involve-card:hover img {
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+}
+
 .involve-title {
     font-size: 3em;
     color: var(--main);
     margin-bottom: 0.5em;
 }
 
-.involve-card > img {
+/* .involve-card > img {
     width: 20em;
     margin-bottom: 1em;
     border-radius: 0.2em;
-}
+} */
 
 .links {
     font-size: 1.5em;
