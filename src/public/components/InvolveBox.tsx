@@ -14,19 +14,33 @@ export default class InvolveBox extends Component<InvolveBoxProps> {
     }
 
     public render() {
-        return (
-            <div className="involve-card">
+        if (this.props.boxTitle) {
+            return (
                 <a
-                    className="involve-title"
                     href={"/" + this.props.boxTitle.toLowerCase()}
+                    className="involve-card"
                 >
-                    {this.props.boxTitle}
+                    <div className="involve-title">{this.props.boxTitle}</div>
+                    <div className="involve-img">
+                        <img src={this.props.image}></img>
+                    </div>
+                    <div className="involve-description">
+                        {this.props.description}
+                    </div>
                 </a>
-                <img src={this.props.image}></img>
-                <div className="involve-description">
-                    {this.props.description}
+            );
+        } else {
+            return (
+                <div className="involve-card">
+                    <div className="involve-title">{this.props.boxTitle}</div>
+                    <div className="involve-img">
+                        <img src={this.props.image}></img>
+                    </div>
+                    <div className="involve-description">
+                        {this.props.description}
+                    </div>
                 </div>
-            </div>
-        );
+            );
+        }
     }
 }

@@ -179,7 +179,7 @@ a:hover {
     background-color: var(--main);
     background-blend-mode: overlay;
     background-image: url("../img/backgrounds/ps.webp");
-    height: 40em;
+    height: 43em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,15 +192,31 @@ a:hover {
     color: var(--accent);
 }
 
+.project-space img {
+    height: 3em;
+}
+
+.ps-links {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    display: flex;
+    column-gap: 4em;
+    text-align: center;
+}
+
+.ps-links span {
+    display: block;
+    margin-top: 0.5em;
+}
+
+.ps-links img {
+    fill: color(--accent);
+}
+
 .ps-title {
     font-size: 3em;
     color: white;
     margin-bottom: 1em;
-}
-
-.visit-us {
-    font-size: 2em;
-    margin-bottom: 2em;
 }
 
 .ex-link {
@@ -232,17 +248,36 @@ a:hover {
     margin: 1em;
 }
 
+.involve-img {
+    display: inline-block;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 0.2em;
+}
+
+.involve-card img {
+    display: block;
+    transition: transform 0.4s;
+    width: 20em;
+    border-radius: 0.2em;
+}
+
+.involve-card:hover img {
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+}
+
 .involve-title {
     font-size: 3em;
     color: var(--main);
     margin-bottom: 0.5em;
 }
 
-.involve-card > img {
+/* .involve-card > img {
     width: 20em;
     margin-bottom: 1em;
     border-radius: 0.2em;
-}
+} */
 
 .links {
     font-size: 1.5em;
