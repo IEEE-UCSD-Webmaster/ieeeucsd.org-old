@@ -1,5 +1,11 @@
+import {
+    NavigationHelpersContext,
+    useNavigation,
+    useNavigationState,
+} from "@react-navigation/native";
 import * as React from "react";
 import { Component } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface InvolveBoxProps {
     boxTitle: string;
@@ -14,19 +20,29 @@ export default class InvolveBox extends Component<InvolveBoxProps> {
     }
 
     public render() {
-        return (
-            <div className="involve-card">
+        if (this.props.boxTitle) {
+            return (
                 <a
-                    className="involve-title"
                     href={"/" + this.props.boxTitle.toLowerCase()}
+                    className="involve-card"
                 >
-                    {this.props.boxTitle}
+                    <div className="involve-title">{this.props.boxTitle}</div>
+                    <img src={this.props.image}></img>
+                    <div className="involve-description">
+                        {this.props.description}
+                    </div>
                 </a>
-                <img src={this.props.image}></img>
-                <div className="involve-description">
-                    {this.props.description}
+            );
+        } else {
+            return (
+                <div className="involve-card">
+                    <div className="involve-title">{this.props.boxTitle}</div>
+                    <img src={this.props.image}></img>
+                    <div className="involve-description">
+                        {this.props.description}
+                    </div>
                 </div>
-            </div>
-        );
+            );
+        }
     }
 }
