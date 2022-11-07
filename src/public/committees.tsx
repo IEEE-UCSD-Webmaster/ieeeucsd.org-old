@@ -4,7 +4,6 @@ import TopBar from "./components/TopBar";
 import { ACTIVE_PAGES, SOCIALS, EMAIL, OFFICERS } from "./Config";
 import Splash from "./components/Splash";
 import DefaultSection from "./components/DefaultSection";
-import InvolveBox from "./components/InvolveBox";
 import SocialCard from "./components/SocialCard";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
