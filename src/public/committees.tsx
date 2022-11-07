@@ -8,6 +8,7 @@ import InvolveBox from "./components/InvolveBox";
 import SocialCard from "./components/SocialCard";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
+import CommitteeBox from "./components/CommitteeBox";
 
 class Main extends React.Component {
     constructor() {
@@ -32,31 +33,31 @@ class Main extends React.Component {
                 ></DefaultSection>
                 <DefaultSection className={"our-comms"} title="Our Committees">
                     <div className="cards">
-                        <InvolveBox
+                        <CommitteeBox
                             boxTitle=""
                             image="/assets/img/committees/technical.webp"
                             description="Technical Committee"
-                        ></InvolveBox>
-                        <InvolveBox
+                        ></CommitteeBox>
+                        <CommitteeBox
                             boxTitle=""
                             image="/assets/img/committees/social.webp"
                             description="Social Committee"
-                        ></InvolveBox>
-                        <InvolveBox
+                        ></CommitteeBox>
+                        <CommitteeBox
                             boxTitle=""
                             image="/assets/img/committees/professional.webp"
                             description="Professional Committee"
-                        ></InvolveBox>
-                        <InvolveBox
+                        ></CommitteeBox>
+                        <CommitteeBox
                             boxTitle=""
                             image="/assets/img/committees/pr.webp"
                             description="PR Committee"
-                        ></InvolveBox>
-                        <InvolveBox
+                        ></CommitteeBox>
+                        <CommitteeBox
                             boxTitle=""
                             image="/assets/img/committees/outreach.webp"
                             description="Outreach Committee"
-                        ></InvolveBox>
+                        ></CommitteeBox>
                     </div>
                 </DefaultSection>
 
