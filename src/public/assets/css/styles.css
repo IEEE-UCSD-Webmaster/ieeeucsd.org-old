@@ -232,7 +232,7 @@ a:hover {
 
 .cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -273,11 +273,59 @@ a:hover {
     margin-bottom: 0.5em;
 }
 
-/* .involve-card > img {
-    width: 20em;
-    margin-bottom: 1em;
+.committees {
+    border-radius: 50% 50% 0 0 / 4rem;
+    transform: translateY(-4rem);
+}
+
+.committee-card {
+    padding: 1.75em 3em;
+    border: var(--main) solid 0.37em;
+    border-radius: 1.5em;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1em;
+    background-color: var(--main);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    width: 30em;
+}
+
+.committee-img {
+    display: inline-block;
+    margin: 20px;
+    overflow: hidden;
     border-radius: 0.2em;
-} */
+    width: 10;
+}
+
+.committee-card img {
+    display: block;
+    transition: transform 0.4s;
+    width: 20em;
+    border-radius: 0.2em;
+}
+
+.committee-card:hover img {
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+}
+
+.committee-title {
+    font-size: 3em;
+    color: var(--secondary);
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.committee-description {
+    font-size: 1.25em;
+    font-weight: normal;
+}
 
 .links {
     font-size: 1.5em;

@@ -12,7 +12,7 @@ Please create a new branch for development (i.e. `[NAME]-dev`). Pushing directly
 
 To build the site, run `npm run build`.
 
-To view the site on your local network, run `npm build/index.js`. View the site at [localhost:9000](http://localhost:9000).
+To view the site on your local network, run `npm run serve`. View the site at [localhost:9000](http://localhost:9000).
 
 ### Images
 
