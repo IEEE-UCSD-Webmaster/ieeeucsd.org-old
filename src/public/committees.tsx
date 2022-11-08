@@ -30,7 +30,7 @@ class Main extends React.Component {
                         "Interested in gaining experience in event planning and development, meeting new friends, and learning more about IEEE? Join one of our committees as an IEEEntern!",
                     ]}
                 ></DefaultSection>
-                <DefaultSection className={"our-comms"} title="Our Committees">
+                <DefaultSection className={"committees"} title="Our Committees">
                     <div className="cards">
                         <CommitteeBox
                             boxTitle="Technical Committee"
