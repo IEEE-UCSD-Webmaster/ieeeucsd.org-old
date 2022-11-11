@@ -203,7 +203,7 @@ export const OFFICERS = [
     {
         name: "Parisa Shahabi",
         position: "Social Chair",
-        photo: "/assets/img/officers/parisa.jpg",
+        photo: "/assets/img/officers/parisa.webp",
         email: "email@ucsd.edu",
     },
     {

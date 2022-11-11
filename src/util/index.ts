@@ -12,6 +12,7 @@ interface Website {
     cssfile: string;
     themecolor: string;
     path?: string;
+    filename?: string;
 }
 
 const APP = express();
@@ -52,6 +53,16 @@ const WEBSITES = [
         jsfile: "/assets/js/committees.js",
         cssfile: "/assets/css/styles.css",
         themecolor: "",
+    },
+    {
+        sitename: "404",
+        title: "Page Not Found",
+        description: "404 Page Not Found",
+        jsfile: "/assets/js/404.js",
+        cssfile: "/assets/css/styles.css",
+        themecolor: "",
+        path: "/",
+        filename: "404.html",
     },
 ] as Website[];
 
@@ -118,8 +129,7 @@ function generateFilePages() {
             path.join(
                 __dirname,
                 "../public/",
-                site.path ?? site.sitename,
-                "/index.html"
+                site.filename ?? (site.path ?? site.sitename) + "/index.html"
             ),
             html
         );
