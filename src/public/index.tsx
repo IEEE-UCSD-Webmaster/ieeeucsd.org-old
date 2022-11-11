@@ -45,14 +45,18 @@ class Main extends React.Component {
                         is an open-access, collaborative space where students
                         can do homework or get access to basic electronic tools
                         such as soldering stations, breadboard components, and
-                        Arduino and Raspberry PI parts!
+                        Arduino and Raspberry PI parts! Come visit at EBU1-4710!
                     </p>
-                    <a
-                        className="visit-us"
-                        href="https://www.google.com/maps/@32.8817126,-117.2350998,59m/"
-                    >
-                        Come visit at EBU1-4710!
-                    </a>
+                    <div className="ps-links">
+                        <a href="/events#oa-cal">
+                            <img src="/assets/img/calendar_accent.svg"></img>
+                            <span>Open Hours</span>
+                        </a>
+                        <a href="https://www.google.com/maps/@32.8817126,-117.2350998,59m/">
+                            <img src="/assets/img/location_accent.svg"></img>
+                            <span>Directions</span>
+                        </a>
+                    </div>
                 </div>
                 <DefaultSection
                     className={"involved"}
