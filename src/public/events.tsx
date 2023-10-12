@@ -35,7 +35,7 @@ class Main extends React.Component {
                 <div id="oa-cal">
                     <DefaultSection title="Open Access Hours">
                         <iframe
-                            src="https://calendar.google.com/calendar/embed?src=c_gr3iim9ae4dv9784qkf8meb40c%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+                            src="https://calendar.google.com/calendar/embed?src=c_5c08a366ecd44f440431cb647cf9b390a2f62473b4d19c8c355b32a411225067%40group.calendar.google.com&ctz=America%2FLos_Angeles"
                             frameBorder="0"
                             scrolling="no"
                         ></iframe>
