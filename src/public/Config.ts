@@ -107,7 +107,7 @@ export const OFFICERS = [
     {
         name: "Matthew Yik",
         position: "VC Finance",
-        photo: "/assets/img/officers/matthew.jpg",
+        photo: "/assets/img/officers/matthewyik.webp",
         email: "",
     },
     {
@@ -161,13 +161,13 @@ export const OFFICERS = [
     {
         name: "Joshua Lapidario",
         position: "Quarterly Projects Chair",
-        photo: "/assets/img/officers/joshua .jpg",
+        photo: "/assets/img/officers/joshua.jpg",
         email: "",
     },
     {
         name: "Sankalp Kaushik",
         position: "Professional Chair",
-        photo: "/assets/img/officers/sankalp .jpg",
+        photo: "/assets/img/officers/sankalp.jpg",
         email: "",
     },
     {
@@ -209,7 +209,7 @@ export const OFFICERS = [
     {
         name: "Ashlee Young",
         position: "Outreach Chair",
-        photo: "/assets/img/officers/ashlee .jpg",
+        photo: "/assets/img/officers/ashlee.jpg",
         email: "",
     },
     {
