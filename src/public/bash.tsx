@@ -7,6 +7,7 @@ import DefaultSection from "./components/DefaultSection";
 import InvolveBox from "./components/InvolveBox";
 import SocialCard from "./components/SocialCard";
 import Footer from "./components/Footer";
+var bashSlides = require("./bash/index.html");
 
 class Main extends React.Component {
     constructor() {
@@ -15,7 +16,7 @@ class Main extends React.Component {
     }
 
     public render() {
-        return <h1>Hello World</h1>;
+        return <iframe src={bashSlides}></iframe>;
     }
 }
 

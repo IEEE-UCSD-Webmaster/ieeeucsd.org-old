@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/assets/css/fonts.css"
+            media="screen"
+        />
+        <link rel="stylesheet" type="text/css" href="$CSSFILE" media="screen" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <meta
+            name="viewport"
+            content="height=device-height, width=device-width, initial-scale=1"
+        />
+        <meta name="description" content="$DESCRIPTION" />
+        <meta name="theme-color" content="$THEMECOLOR" />
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-85129590-1"
+        ></script>
+        <link rel="stylesheet" href="dist/reset.css" />
+        <link rel="stylesheet" href="dist/reveal.css" />
+        <link rel="stylesheet" href="dist/theme/blood.css" />
+        <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-<head>
-	<link rel="stylesheet" type="text/css" href="/assets/css/fonts.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="$CSSFILE" media="screen">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
-	<meta name="description" content="$DESCRIPTION">
-	<meta name="theme-color" content="$THEMECOLOR">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-85129590-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+            gtag("config", "UA-85129590-1");
+        </script>
+        <title>$TITLE</title>
+    </head>
 
-		gtag('config', 'UA-85129590-1');
-	</script>
-	<title>$TITLE</title>
-</head>
-
-<body>
-	<div id="root"></div>
-	<script type="text/javascript" src="$JSFILE"></script>
-</body>
-
+    <body>
+        <div id="root"></div>
+        <script type="text/javascript" src="$JSFILE"></script>
+    </body>
 </html>
