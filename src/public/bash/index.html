@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/blood.css">
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-transition="none">
+          <h2>
+            IEEE Bash Scripting
+          </h2>
+          <!--FIXME:Can't seem to get this to keep the prompt, so instead the inserted strings have it attached)-->
+          <pre><code data-no-escape id="BashSlide1"></code>
+           </pre>
+        </section>
+                <!--- 
+         _                              _  _          
+        |_  ._ | _.._  _._|_o _ ._   __|_ |_) _. _|_  
+        |_><|_)|(_|| |(_| |_|(_)| | (_)|  |_)(_|_>| | 
+            |                                         ---->
+        <section data-markdown data-transition="none">
+          <textarea data-template>
+            ## What is Bash?
+          </textarea>
+        </section>
+        <section data-markdown data-transition="none">
+          <textarea data-template>
+            ### Compiled vs Interpreted languagess
+            | Compiler | Interpreter |
+            | -------- | ----------- |
+            | "Compiles" down a program into binary (machine code) <!-- .element: class="fragment fade-right"   data-fragment-index="1" style="font-size:0.7em;" -->|  Does not save machine langauge <!-- .element: class="fragment fade-left"   data-fragment-index="1" style="font-size:0.7em;" -->|
+            | Must first compile a program into machine code before running <!-- .element: class="fragment fade-right"   data-fragment-index="2" style="font-size:0.7em;" -->| Interprets each line and executes each as it reads them <!-- .element: class="fragment fade-left"   data-fragment-index="2" style="font-size:0.7em;" -->|
+            | Tries to make use of the cpu it compiles a program for <!-- .element: class="fragment fade-right"   data-fragment-index="3" style="font-size:0.7em;" -->| Usually less finetuned for a CPU <!-- .element: class="fragment fade-left"   data-fragment-index="3" style="font-size:0.7em;" -->|
+            | Usually favored in production <!-- .element: class="fragment fade-right"   data-fragment-index="4" style="font-size:0.7em;" -->| Usually favored in development and programming environments <!-- .element: class="fragment fade-left"   data-fragment-index="4" style="font-size:0.7em;" -->|
+          </textarea>
+        </section>
+        <section data-markdown data-transition="none">
+          <textarea data-template>
+            ### Example Languages
+            | Compiled | Interpreted |
+            | -------- | ----------- |
+            | C/C++    <!-- .element: class="fragment fade-right"   data-fragment-index="1" -->| Python     <!-- .element: class="fragment fade-left"   data-fragment-index="1" --> | 
+            | Java    <!-- .element: style="visibility:hidden;" -->| JavaScript <!-- .element: style="visibility:hidden;" -->|
+            | Rust    <!-- .element: style="visibility:hidden;" -->| PHP        <!-- .element: style="visibility:hidden;" -->|
+            | Haskell <!-- .element: style="visibility:hidden;" -->| Ruby       <!-- .element: style="visibility:hidden;" -->|
+            - Bash is a 
+            command language <!-- .element:  style="visibility:hidden;"-->
+            *interpreter* <!-- .element: style="visibility:hidden;"-->
+          </textarea>
+        </section>
+
+
+
+
+				<section>
+          <section data-auto-animate data-transition="none">
+            <h4>Compiled vs Interpreted Example</h2>
+            <div class="r-hstack">
+              <div class="r-vstack" style="width:35vw; height=1vw;">
+                <pre style="text-align: center;"><p id="c-example-dir" class="hljs">program.c    <span style="visibility:hidden;">program</span></p></pre>
+                <pre style="font-size:40%"><code data-line-numbers data-trim data-no-escape>#include &lt;stdio.h&gt;
+  int main() {
+  int a = 36;
+  int b = 6;
+  printf("The answer to life, the universe,\
+  and everything: %d\n", a+b);
+  return 0;
+  }
+                </code></pre>
+                <pre style="font-size:40%" data-id="code"><code class="hljs bash" data-line-numbers data-trim>$ gcc program.c -o program</code></pre>
+              </div>
+
+              <div class="r-vstack" style="width:35vw">
+                <pre style="text-align: center;"><p id="python-example-dir">program.py</p></pre>
+                <pre style="font-size:40%"><code data-id="python-example" class="hljs">a = 36;
+  b = 6;
+  print("The answer to life, the universe,\
+   and everything: {}".format(a+b))</code></pre>
+                <pre style="font-size:40%" data-id="code"><code data-id="python-example-cli" class="hljs bash" data-trim>$ python everything.py
+  The answer to life, the universe, and everything: 42</code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section data-auto-animate data-transition="none">
+            <h4>Compiled vs Interpreted Example</h2>
+            <div class="r-hstack">
+              <div class="r-vstack" style="width:35vw; height=1vw;">
+                <pre style="text-align: center;"><p id="c-example-dir" >program.c    <span class="fade-in" style="color:lightgreen;">program</span></p></pre>
+                <pre style="font-size:40%"><code data-line-numbers data-trim data-no-escape>#include &lt;stdio.h&gt;
+  int main() {
+  int a = 36;
+  int b = 6;
+  printf("The answer to life, the universe,\
+  and everything: %d\n", a+b);
+  return 0;
+  }
+                </code></pre>
+                <pre style="font-size:40%" data-id="code"><code class="hljs bash" data-line-numbers="2|3" data-trim>$ gcc program.c -o program
+$ ./program
+We know the answer is 42, but what is the question?</code></pre>
+
+              </div>
+              <div class="r-vstack" style="width:35vw">
+                <pre style="text-align: center;"><p id="python-example-dir">program.py</p></pre>
+                <pre style="font-size:40%"><code data-id="python-example" class="hljs" data-line-numbers="1|2|3,4">a = 36;
+  b = 6;
+  print("The answer to life, the universe,\
+   and everything: {}".format(a+b))
+                </code></pre>
+                <pre style="font-size:40%"><code data-id="python-example-cli" class="hljs" data-line-numbers="1|2">$ python everything.py
+  The answer to life, the universe, and everything: 42
+                </code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="none">
+            <h2>
+              TODO: Show how there exists a python <b>shell</b>
+            </h2>
+          </section>
+        </section>
+
+
+
+
+
+        <section data-markdown data-transition="none">
+          <textarea data-template>
+            | Compiled | Interpreted |
+            | -------- | ----------- |
+            | C/C++    | Python      |
+            | Java    <!-- .element: class="fragment fade-right"   data-fragment-index="0" -->| JavaScript <!-- .element: class="fragment fade-left"   data-fragment-index="0" -->|
+            | Rust    <!-- .element: class="fragment fade-right"   data-fragment-index="0" -->| PHP        <!-- .element: class="fragment fade-left"   data-fragment-index="0" -->|
+            | Haskell <!-- .element: class="fragment fade-right"   data-fragment-index="0" -->| Ruby       <!-- .element: class="fragment fade-left"   data-fragment-index="0" -->|
+            - Bash is a  <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+            *command* language <!-- .element: class="fragment highlight-red"   data-fragment-index="3" -->
+            *interpreter* <!-- .element: class="fragment highlight-green"   data-fragment-index="2" -->
+          </textarea>
+        </section>
+
+        <!--- 
+         _                         ___          
+        /  _ ._ _ ._ _  _.._  _| _  | .__|_.__  
+        \_(_)| | || | |(_|| |(_|_> _|_| ||_|(_) ---->
+
+        <section data-transition="none">
+          <h2>
+            TODO: Entering commands into terminal example example
+          </h2>
+          <p>How programs can be called: firefox, steam, discord, grep</p>
+        </section>
+
+        <section data-transition="none">
+          <h2>
+            TODO: Go list what are some commands line by line
+          </h2>
+          <p>cd ls echo/printf</p>
+        </section>
+
+        <section data-transition="none">
+          <h2>
+            TODO: Go list what are some commands line by line CONTD.
+          </h2>
+          <p>cat, other commands we might use in the scripts</p>
+        </section>
+
+        <section data-transition="none">
+          <h2>
+            TODO: Explain how command shells there are: zsh on mac, Powershell and Command Line Prompt on Windows, and Bash, then more alternatives
+          </h2>
+        </section>
+
+        <!-- THis slie works to explain how the format of most shells is determined by POSIX -->
+        <section data-transition="none" data-background-iframe="https://standards.ieee.org/ieee/1003.1/7101/" data-background-interactive>
+          <!-- TODO: Fix a better color bright TODO:loads a little earlier -->
+					<h2 style="color: #fff;">POSIX IEEE 1003.1 (2017)</h2>
+          <img src="./POSIX-standard-2017.png" style="position:fixed;bottom:-150%;left:75%;border: 2px solid black;border-radius: 10px;"></img>
+				</section>
+
+        <section data-transition="none">
+          <h2>
+            TODO: Funny Yash shell
+          </h2>
+        </section>
+
+
+        <!--- 
+         _           __                  
+        |_) _. _|_  (_  _._o.__|_o._  _  
+        |_)(_|_>| | __)(_| ||_)|_|| |(_| 
+                            |         _| -->
+
+        <section data-transition="none" data-markdown>
+          <textarea data-template>
+            ## Bash Logic Crash Course
+            ---
+            ## Variables
+            ```bash
+            # Implicitly defined
+            answer="42"
+            echo $answer
+            # Or better
+            # printf "%s\n" $answer
+            ```
+          </textarea>
+        </section>
+
+				<section>
+					<section data-transition="none" data-auto-animate>
+            <h2>Control Logic</h2>
+            <p><b>If Statement: </b></p>
+            <pre data-id="code"><code class="hljs bash" data-trim>if COMMAND; then
+  # Insert more commands here
+fi</code></pre>
+					</section>
+					<section data-transition="none" data-auto-animate>
+            <h2>Control Logic</h2>
+            <p><b>If Statement: </b></p>
+            <pre data-id="code"><code class="hljs bash" data-trim>if COMMAND; then
+  # Insert more commands here
+fi
+
+if COMMAND; then
+  # Insert more commands here
+else
+  # Do otherwise
+fi</code></pre>
+					</section>
+					<section data-transition="none" data-auto-animate>
+            <h2>Control Logic</h2>
+            <p><b>If Statement: </b></p>
+            <pre data-id="code"><code class="hljs bash" data-trim>if COMMAND; then
+  # Insert more commands here
+fi
+
+if COMMAND; then
+  # Insert more commands here
+else
+  # Do otherwise
+fi
+
+if [[ 2 -eq 2 ]]; then
+  # Insert more commands here
+else
+  # Do otherwise
+fi</code></pre>
+					</section>
+				</section>
+
+        <section data-transition="none" data-markdown>
+          <textarea data-template>
+            For loops: 
+            ```bash
+            for i in <item1> <item2> <item3>; do
+              # Insert more commands here
+              # $i holds the information
+            fi
+            ```
+          </textarea>
+        </section>
+
+        <section>
+          <h3>TODO on these things</h3>
+          <p>
+                - Piping
+        - If Statement: 
+          - && and || 
+        - For loops: 
+        - How the scripts actually work
+        - functions, associative arrays, string substition, etc. 
+          - Look at a good cheatsheet
+          </p>
+        </section>
+
+        <section>
+          <h3>TODO: Give good resources on bash cheatsheets: https://devhints.io/bash</h3>
+        </section>
+
+
+        <!-- 
+           __             
+          (_  _ ._ o.__|_ _ 
+          __)(_ |  ||_)|__> 
+                   |       -->
+
+        <section>
+          <h3>TODO: mild script example 1</h3>
+        </section>
+        <section>
+          <h3>TODO: mild script example 2</h3>
+        </section>
+        <section>
+          <h3>TODO: mild script example 3</h3>
+        </section>
+
+        <!--- 
+         _                                          
+        |_  ._  _.._  _|o._  _  | | _ _.|_ o|o_|_   
+        |_><|_)(_|| |(_||| |(_| |_|_>(_||_)||| |_\/ 
+            |                _|                  / -->
+
+        <section>
+          <h3>TODO: rclone</h3>
+        </section>
+
+        <section>
+          <h3>TODO: httpd servers</h3>
+        </section>
+
+        <section>
+          <h3>TODO: wget</h3>
+        </section>
+
+        <section>
+          <h3>TODO: combining wget and http to mirror sites</h3>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Get every Canvas file from your course!</h3>
+          <aside class="notes">
+            Here's a script to download all files for a given Canvas course.
+            
+            You will need to get an API Token from Canvas for UCSD and the course ID.
+            To get the course ID, take the ID from the course's URL. Go to your browser,
+            open your course page, you will get a URL like this:
+
+            https://canvas.ucsd.edu/courses/123456
+
+            The ID is the number at the end. Place it at the end of the variable COURSE_ID below
+            with quotes.
+
+            For the API token, click on your profile picture, then click "Settings". After that,
+            create a "New Access Token" under the "Approved Integrations" section. Add a name
+            and expiration date. You will get a token on the dialog after that looks something
+            like this:
+
+            "12345~..."
+
+            Just put it down in the variable API_TOKEN below.
+
+            This uses "jq" to filter the JSON received into a readable format
+            for our script. '.[]' takes every element from the array and lists it line-by-line,
+            while the second part creates a string containing the fields from the request, comma-delimited.
+
+            Try running the command above on its own and experiment with different "jq" queries.
+            There are cheat sheets online you can find, it's cool!
+
+            For each line from the above query, we'll get the filename
+            and the URL. Then, for all of them, we will download the file
+            in the directory "files/" and just name it as-is on the page.
+
+            The line variable looks something like this: "NAME OF FILE,URL TO DOWNLOAD FILE"
+            Awk is a scripting language for text manipulation.
+            You can use to quickly parse comma-delimited values, which is what I do below.
+
+            Download the file and move it to the files directory. "-s" silences the progress bar
+            that shows up with cURL, you can remove the "-s" to see it.
+          </aside>
+          <pre><code data-line-numbers="1|3-4|6|8-14|9-12|13|16,22|17-18|19-21|24" style="padding: 0.50em; margin: 0.25em" data-fragment-index="0">#!/usr/bin/env bash
+
+COURSE_ID="123456"
+API_TOKEN="12345~..."
+
+mkdir -p files/
+
+FILES=$(
+	curl
+	-X GET
+	-H "Authorization: Bearer $API_TOKEN" \
+		https://canvas.ucsd.edu/api/v1/courses/$COURSE_ID/files |
+		jq -r '.[] | "\(.filename),\(.url)"'
+)
+
+echo "$FILES" | while IFS= read -r line; do
+	FILENAME=$(echo $line | awk -F',' '{print $1}')
+	URL=$(echo $line | awk -F',' '{print $2}')
+	echo "Downloading $FILENAME..."
+	curl -s "$URL" -o "$FILENAME"
+	mv "$FILENAME" "files/$FILENAME"
+done
+
+echo "Done! All your files are in the 'files/' directory."
+</code></pre>
+        </section>
+        <!-- Some other possible slides
+        - yt-dlp use case - Me?
+        - Using rclone                          - Khai
+          - Editing text files in gdrive
+          - Plug ieee google suite    
+        - Download canvas material   - Matei
+        - Instaloader - Paco
+        - Secondary Examples
+          - QR code creation? - Paco
+          - Instaloader download - Paco
+          - Script to take text from a picture - Paco (idk fam)
+          - Link to our site?
+          - Messing with images/pdfs etc.  too easy on mac
+          - Come up with a hard pdf thing
+          - Counting stats for a git repo  - Paco
+                    - ffmpeg, aria2c, ab-av1, largest file script (du -sh)-->
+
+
+        <!--- 
+         __                                    
+        (_    ._  _ .__ _ ._ _ ._   _|_o._  _  
+        __)|_||_)(/_|(_(_)| | ||_)|_||_|| |(_| 
+              |                |            _| -->
+        <section>
+          <h3>TODO: Plug in how bash is essential to supercomputing</h3>
+        </section>
+        <section>
+          <h3>TODO: Plug in SCC Apps and also our website </h3>
+        </section>
+        <section>
+          <h3>TODO: Thank you Slide</h3>
+        </section>
+
+        <section>
+          <h3>WARNING: Slides after this are just for debugging and messing with layouts,css,js,etc.</h3>
+        </section>
+
+				<section>
+					<p style="width:100%">Trying to braek the bounds of the perhaps margin on this thing. They contain the maximum size of content for slides.</p>
+				</section>
+
+				<section data-transition="none" data-auto-animate>
+					<h2>Example Script</h2>
+          <div class="r-vstack">
+            <pre><code data-line-numbers="1|2|3|5|7" style="padding: 0.50em; margin: 0.25em" data-fragment-index="0">#!/bin/bash
+# Descr: Bash Script for Bash Workshop
+printf "Hi, how are you doing?\n"
+
+firefox
+
+wget -k -m -r https://ieeeucsd.org/
+            </code></pre>
+          <div class="r-vstack">
+            <pre><code data-line-numbers="1|2|3|3|7" style="padding: 0.50em; margin: 0.25em" data-fragment-index="0">#!/bin/bash
+# Descr: Bash Script for Bash Workshop
+printf "Hi, how are you doing?\n"
+
+firefox
+
+wget -k -m -r https://ieeeucsd.org/
+            </code></pre>
+					</div>
+				</section>
+				<section data-transition="none" data-auto-animate>
+					<h2>HStack Example</h2>
+					<div class="r-hstack">
+					<div class="r-vstack">
+						<p style="padding: 0.50em; margin: 0.25em">One</p>
+						<p style="padding: 0.75em; margin: 0.25em">Two</p>
+						<p style="padding: 1.00em; margin: 0.25em">Three</p>
+					</div>
+					<div class="r-vstack">
+						<p style="padding: 0.50em; margin: 0.25em">One</p>
+						<p style="padding: 0.75em; margin: 0.25em">Two</p>
+						<p style="padding: 1.00em; margin: 0.25em">Three</p>
+					</div>
+					</div>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+    <!--TODO include this in the repo as to not depend on npm-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      let typed = null;
+      const renderTyping = function(event) {
+        // Check if the current slide contains an element with id "BashSlide1"
+        if (event.currentSlide.querySelector('#BashSlide1')) {
+          // Initialize Typed.js on the element
+          typed = new Typed('#BashSlide1', {
+            strings: [
+              'IEEE@UCSD$ ls | sed s\'/',
+              'IEEE@UCSD$ ls | sed',
+              'IEEE@UCSD$ ls -a | s',
+              'IEEE@UCSD$ for i in',
+              'IEEE@UCSD$ for file in \$(ls \-1a)\; done',
+              'IEEE@UCSD$ for file in \$(ls \-1a)\; do\\\n> ',
+              'IEEE@UCSD$ for file in \$(ls \-1a)\; do\\\n> echo Replacing "Andrew" with "Mike"',
+              'IEEE@UCSD$ for file in \$(ls \-1a)\; do\\\n> printf "Replacing \\"Andrew\\" with \\"Mike\\" in file %s" $i',
+              'IEEE@UCSD$ for file in \$(ls \-1a)\; do\\\n> printf "Replacing \\"Andrew\\" with \\"Mike\\" in file %s\\n" $file\\n> sed \'s/Andrew/Mike/g\' $file',
+              'IEEE@UCSD$ for file in \$(ls \-1a)\; do\\\n> printf "Replacing \\"Andrew\\" with \\"Mike\\" in file %s\\n" $file\\n> sed -i \'s/Andrew/Mike/g\' $file\ndone \n^1000#forgot to acount for directories',
+              'IEEE@UCSD$ find . -exec sex -',
+              'IEEE@UCSD$ find . -exec sed -i \'s',
+              'IEEE@UCSD$ find . -type f exec sed -i \'s/Andrew/Mi',
+              'IEEE@UCSD$ find . -type f -exec sed -i \'s/Andrew/Mike\' {} ^1000\n `find: missing argument to -exec`',
+              'IEEE@UCSD$ find . -type f -exec sed -i \'s/Andrew/Mike\' {} \\;^3000\n # It is done, do again? ^4000 Y'
+              ],
+            typeSpeed: 50, // Typing speed in milliseconds
+            backSpeed: 20,
+            shuffle: false,
+            showCursor: false,
+            loop: true, // Whether to loop the animation
+          });
+        } else {
+          typed.destroy();
+        }
+      }
+      Reveal.addEventListener('ready', renderTyping);
+      Reveal.addEventListener('slidechanged', renderTyping);
+    </script>
+  </body>
+</html>

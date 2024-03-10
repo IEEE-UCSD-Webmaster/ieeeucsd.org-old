@@ -96,6 +96,10 @@ APP.get("/committees", (req: Request, res: Response) => {
     respond(res, "committees");
 });
 
+APP.get("/bash", (req: Request, res: Response) => {
+    respond(res, "bash");
+});
+
 // Utility functions for above methods
 
 function respond(res: Response, filename: string) {
